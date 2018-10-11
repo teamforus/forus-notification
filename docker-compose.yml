@@ -6,7 +6,9 @@ services:
     expose:
       - "8000"
     links:
-      - postgres:postgres 
+      - postgres:postgres
+#      - rabbitmq:rabbit
+      - redis:redis
     volumes:
       - ./web:/usr/src/app
     env_file: .env
@@ -33,9 +35,39 @@ services:
     ports:
       - "5432:5432"
 
+
   data:
     restart: always
     image: postgres:latest
     volumes:
       - /var/lib/postgresql
     command: echo 'true'
+
+  redis:
+    image: redis:2.8.19
+    environment:
+      - USER_TOKEN_DB=1
+
+#  rabbitmq:
+#    image: rabbitmq:3
+#    env_file: .env
+#    ports:
+#      - 5672:5672
+
+
+  worker:
+    build: ./web
+    command: sh /usr/src/app/run_celery_worker.sh
+    volumes:
+       - ./web:/usr/src/app
+    env_file: .env
+    links:
+      - postgres:postgres
+#      - rabbitmq:rabbit
+      - redis:redis
+
+
+
+
+
+

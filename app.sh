@@ -46,6 +46,14 @@ logs() {
   docker logs forus-notification_web_1
 }
 
+celery_logs() {
+  docker logs forus-notification_worker_1
+}
+
+redis_logs() {
+  docker logs forus-notification_redis_1
+}
+
 
 createsuperuser() {
     docker exec -it forus-notification_web_1 python manage.py createsuperuser
