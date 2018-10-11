@@ -4,9 +4,12 @@ from apps.notification_user.models import UserConnectionField
 
 
 class UserConnectionFieldSerializer(serializers.Serializer):
+    user_id = serializers.CharField()
+    value = serializers.CharField()
+    type = serializers.IntegerField()
 
-    user_id = serializers.Serializer()
-
-    class Meta:
-        model = UserConnectionField
-        fields = ('user_id', 'value', 'type')
+    def validate(self, attrs):
+        self.user_id = attrs['user_id']
+        self.value = attrs['value']
+        self.type = attrs['type']
+        return attrs

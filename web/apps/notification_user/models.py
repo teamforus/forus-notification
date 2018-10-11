@@ -3,15 +3,22 @@ from django.db import models
 
 # Create your models here.
 
+class UserConnectionFieldManager(models.Manager):
+    def get_queryset(self):
+        return super(UserConnectionFieldManager, self).get_queryset()
 
+    def get_or_create(self, reffer_id, type, value):
+        user, created = User.objects.get_or_create(reffer_id=reffer_id)
+        connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user, value=value.strip())
 
+        return connection
 
 
 class User(models.Model):
     reffer_id = models.CharField('Id', max_length=1000)
 
     def __str__(self):
-        return self.id
+        return self.reffer_id
 
 
 class UserConnectionField(models.Model):
@@ -27,3 +34,5 @@ class UserConnectionField(models.Model):
     value = models.CharField('value', max_length=1000)
 
     type = models.IntegerField(choices=TYPE_CHOICES, default=EMAIL_TYPE)
+
+    object = UserConnectionFieldManager()
