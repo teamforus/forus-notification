@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+from django.utils.translation import ugettext_lazy as _
 from templated_email.backends.vanilla_django import TemplateBackend
 from kombu import Exchange, Queue
 
@@ -62,6 +63,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -83,6 +85,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -138,3 +141,16 @@ TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBacke
 # You can use a shortcut version
 TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django'
 TEMPLATED_EMAIL_BACKEND = TemplateBackend
+
+
+#i18
+LANGUAGE_CODE = 'nl'
+
+USE_I18N = True
+LANGUAGES = (
+    ('en', _('English')),
+    ('nl', _('Niderlands')),
+)
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)

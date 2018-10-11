@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 from rest_framework_swagger.views import get_swagger_view
 from rest_framework.documentation import include_docs_urls
@@ -23,8 +24,12 @@ schema_view = get_swagger_view(title='API')
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^docs/', include_docs_urls(title='API documentation', public=False)),
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+]
+
+urlpatterns += i18n_patterns(
+    url(r'^swagger/$', schema_view),
     url(r'^user/', include('apps.notification_user.urls', namespace='notification_user')),
     url(r'^sender/', include('apps.sender.urls', namespace='sender')),
-    url(r'^docs/', include_docs_urls(title='API documentation', public=False)),
-    url(r'^swagger/$', schema_view)
-]
+)

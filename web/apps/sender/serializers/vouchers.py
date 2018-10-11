@@ -5,4 +5,8 @@ from apps.sender.serializers import BaseSerializer
 
 
 class NewFundSerializer(BaseSerializer):
-    pass
+
+    fund_name = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/new_fund'
