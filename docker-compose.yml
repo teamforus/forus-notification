@@ -56,6 +56,7 @@ services:
 
 
   worker:
+    restart: always
     build: ./web
     command: sh /usr/src/app/run_celery_worker.sh
     volumes:

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-su -c "celery -A app worker -l info"
+su -c "celery -A apps.core worker -l info"

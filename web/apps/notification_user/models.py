@@ -7,6 +7,12 @@ class UserConnectionFieldManager(models.Manager):
     def get_queryset(self):
         return super(UserConnectionFieldManager, self).get_queryset()
 
+    def find_email_by_user(self, user):
+        return super(UserConnectionFieldManager, self).filter(user=user)
+
+    def find_emails_connection_by_user(self, user):
+        return self.find_email_by_user(user).filter(type=UserConnectionField.EMAIL_TYPE).all()
+
     def get_or_create(self, reffer_id, type, value):
         user, created = User.objects.get_or_create(reffer_id=reffer_id)
         connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user, value=value.strip())
@@ -35,4 +41,4 @@ class UserConnectionField(models.Model):
 
     type = models.IntegerField(choices=TYPE_CHOICES, default=EMAIL_TYPE)
 
-    object = UserConnectionFieldManager()
+    objects = UserConnectionFieldManager()

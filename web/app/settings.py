@@ -54,7 +54,8 @@ INSTALLED_APPS = [
     # 'djcelery_email',
 
     'apps.notification_user',
-    'apps.sender'
+    'apps.sender',
+    'apps.email_sender'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +66,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'apps.sender.middleware.SenderMiddleWare',
 ]
 
 ROOT_URLCONF = 'app.urls'
