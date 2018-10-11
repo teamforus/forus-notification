@@ -24,6 +24,7 @@ schema_view = get_swagger_view(title='API')
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^user/', include('apps.notification_user.urls', namespace='notification_user')),
+    url(r'^sender/', include('apps.sender.urls', namespace='sender')),
     url(r'^docs/', include_docs_urls(title='API documentation', public=False)),
     url(r'^swagger/$', schema_view)
 ]
