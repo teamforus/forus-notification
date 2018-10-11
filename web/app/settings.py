@@ -31,6 +31,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+STATIC_URL = 'static'
 # Application definition
 
 INSTALLED_APPS = [
@@ -40,6 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework_swagger',
 
     'apps.notification_user'
 ]
