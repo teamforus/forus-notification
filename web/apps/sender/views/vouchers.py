@@ -10,6 +10,10 @@ class ProviderAppliedView(ApiSendView):
     serializer_class = serializers.ProviderAppliedSerializer
 
 
+class NewProductAddedView(ApiSendView):
+    serializer_class = serializers.NewProductAddedSerializer
+
+
 class ProviderApprovedView(ApiSendView):
     serializer_class = serializers.ProviderApprovedSerializer
 

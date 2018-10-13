@@ -5,7 +5,6 @@ from apps.sender.serializers import BaseSerializer
 
 
 class NewFundSerializer(BaseSerializer):
-
     fund_name = serializers.CharField()
     username = serializers.CharField()
 
@@ -14,7 +13,6 @@ class NewFundSerializer(BaseSerializer):
 
 
 class ProviderApprovedSerializer(BaseSerializer):
-
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
@@ -24,12 +22,18 @@ class ProviderApprovedSerializer(BaseSerializer):
         return '/vouchers/provider_approved'
 
 
-
 class ProviderAppliedSerializer(BaseSerializer):
-
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
 
     def get_template(self):
         return '/vouchers/provider_applied'
+
+
+class NewProductAddedSerializer(BaseSerializer):
+    product_name = serializers.CharField()
+    provider_name = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/new_product_added'
