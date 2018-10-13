@@ -7,3 +7,8 @@ class SponsorAddYouAsValidatorApi(ApiSendView):
 
 
 
+class NewValidationRequestApi(ApiSendView):
+    serializer_class = serializers.NewValidationRequestSerializer
+
+
+
