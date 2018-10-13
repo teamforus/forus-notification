@@ -6,6 +6,10 @@ class NewFund(ApiSendView):
     serializer_class = serializers.NewFundSerializer
 
 
+class NewFundCreated(ApiSendView):
+    serializer_class = serializers.NewFundCreatedSerializer
+
+
 class ProviderAppliedView(ApiSendView):
     serializer_class = serializers.ProviderAppliedSerializer
 

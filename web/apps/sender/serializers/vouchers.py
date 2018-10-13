@@ -12,6 +12,14 @@ class NewFundSerializer(BaseSerializer):
         return '/vouchers/new_fund'
 
 
+class NewFundCreatedSerializer(BaseSerializer):
+    fund_name = serializers.CharField()
+    requester_name = serializers.CharField()
+    link = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/new_fund_created'
+
 
 class ProviderApprovedSerializer(BaseSerializer):
     fund_name = serializers.CharField()
