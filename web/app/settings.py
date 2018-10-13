@@ -18,7 +18,6 @@ from kombu import Exchange, Queue
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -31,12 +30,9 @@ DEBUG = os.environ['DEBUG']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-
 ALLOWED_HOSTS = []
 
-
 STATIC_URL = '/static/'
-
 
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, "app/templates"),
@@ -93,7 +89,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -108,9 +103,6 @@ DATABASES = {
     }
 }
 
-
-
-
 # Celery settings
 
 CELERY_BROKER_URL = os.environ.get('CELERY_BROKER', '')
@@ -119,8 +111,7 @@ CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 
-
-#EMAIL
+# EMAIL
 
 # CELERY_EMAIL_TASK_CONFIG = {
 #     'queue' : 'email',
@@ -129,12 +120,11 @@ CELERY_TASK_SERIALIZER = 'json'
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.environ.get('EMAIL_HOST','')
-EMAIL_PORT = os.environ.get('EMAIL_PORT','')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER','')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD','')
-EMAIL_USE_TLS =True
-
+EMAIL_HOST = os.environ.get('EMAIL_HOST', '')
+EMAIL_PORT = os.environ.get('EMAIL_PORT', '')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
+EMAIL_USE_TLS = True
 
 TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
 
@@ -142,8 +132,7 @@ TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBacke
 TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django'
 TEMPLATED_EMAIL_BACKEND = TemplateBackend
 
-
-#i18
+# i18
 LANGUAGE_CODE = 'nl'
 
 USE_I18N = True
@@ -154,3 +143,6 @@ LANGUAGES = (
 LOCALE_PATHS = (
     os.path.join(BASE_DIR, 'locale'),
 )
+
+DATE_FORMAT = "d-m-Y"
+USE_L10N = False
