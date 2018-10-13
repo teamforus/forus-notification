@@ -12,6 +12,7 @@ class NewFundSerializer(BaseSerializer):
         return '/vouchers/new_fund'
 
 
+
 class ProviderApprovedSerializer(BaseSerializer):
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()

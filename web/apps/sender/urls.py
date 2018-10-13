@@ -8,12 +8,11 @@ urlpatterns = [
     url(r'^vouchers/new_fund$', views.NewFund.as_view(), name='new-fund-email'),
     url(r'^vouchers/provider_approved', views.ProviderApprovedView.as_view(), name='provider-approved-email'),
     url(r'^vouchers/provider_applied', views.ProviderAppliedView.as_view(), name='provider-applied-email'),
-
     url(r'^vouchers/new_product_added', views.NewProductAddedView.as_view(), name='new-product-added-email'),
 
 
-    url(r'^sponsors/you_added_as_validator', views.SponsorAddYouAsValidatorApi.as_view(), name='you-added-as-validator'),
 
+    url(r'^sponsors/you_added_as_validator', views.SponsorAddYouAsValidatorApi.as_view(), name='you-added-as-validator'),
     url(r'^validations/new_validation_request', views.NewValidationRequestApi.as_view(),
         name='new-validation-request'),
 
