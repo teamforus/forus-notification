@@ -4,7 +4,7 @@ from rest_framework import serializers
 
 class BaseSerializer(serializers.Serializer):
 
-    reffer_id = serializers.CharField()
+    reffer_id = serializers.CharField(allow_blank=False, min_length=1)
 
 
     def get_template(self):

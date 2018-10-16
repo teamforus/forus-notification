@@ -18,5 +18,6 @@ class ApiSendView(BaseSendMixin,generics.GenericAPIView):
         ser = self.serializer_class(data=request.data)
         if ser.is_valid():
             self.send(reffer_user_id=ser.reffer_id, template=ser.get_lang_template(), data=self.get_data(ser))
-
-        return Response({'ok': True}, status=status.HTTP_200_OK)
+            return Response({'ok': True}, status=status.HTTP_200_OK)
+        else:
+            return Response(ser.errors, status=status.HTTP_400_BAD_REQUEST)
