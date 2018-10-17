@@ -1,4 +1,4 @@
-from templated_email import send_templated_mail
+from mail_templated import send_mail
 
 from apps.notification_user.models import UserConnectionField
 
@@ -12,11 +12,18 @@ class Sender():
 
         for connection in connections:
             email = connection.value
-            send_templated_mail(
-                template_name=template,
-                from_email='mk@gmail.com',
-                сс=[email],
-                bcc=[email],
-                recipient_list=[email],
-                context=data,
-            )
+            send_mail(template, data, "noreply@forus.io", [email])
+            # djemail.send_email(
+            #     to=email,
+            #     template_name=template,  # .txt and/or .html
+            #     context=data,
+            #     subject="Forus notification"
+            # )
+            # send_templated_mail(
+            #     template_name=template,
+            #     from_email='mk@gmail.com',
+            #     сс=[email],
+            #     bcc=[email],
+            #     recipient_list=[email],
+            #     context=data,
+            # )

@@ -1,5 +1,7 @@
-{% block subject %}{{provider_name}} wil zich aanmelden voor {{fund_name}}{% endblock %}
-{% block plain %}
+
+{% extends "templated_email/base.tpl" %}
+% block subject %}{{provider_name}} wil zich aanmelden voor {{fund_name}}{% endblock %}
+{% block html %}
 
   Geachte {{sponsor_name}},
 

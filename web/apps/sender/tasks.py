@@ -1,5 +1,4 @@
 import time
-from templated_email import send_templated_mail
 
 from apps.core.celery import app
 from apps.email_sender.sender import Sender as EmailSender

@@ -12,7 +12,6 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 from django.utils.translation import ugettext_lazy as _
-from templated_email.backends.vanilla_django import TemplateBackend
 from kombu import Exchange, Queue
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -50,7 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_swagger',
     'fcm_django',
-    # 'djcelery_email',
+    'mail_templated',
 
     'apps.notification_user',
     'apps.sender',
@@ -128,11 +127,6 @@ EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
 EMAIL_USE_TLS = True
 
-TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django.TemplateBackend'
-
-# You can use a shortcut version
-TEMPLATED_EMAIL_BACKEND = 'templated_email.backends.vanilla_django'
-TEMPLATED_EMAIL_BACKEND = TemplateBackend
 
 # i18
 LANGUAGE_CODE = 'nl'
