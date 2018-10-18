@@ -24,14 +24,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'megg_yej86ln@xao^+)it4e&ueu#!4tl9p1h%2sjr7ey0)m25f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DEBUG']
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '[]')
-print(ALLOWED_HOSTS)
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
