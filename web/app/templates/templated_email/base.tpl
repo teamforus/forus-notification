@@ -13,9 +13,7 @@
             </style>
         </head>
         <body>
-
-
-
+        <body>
             <div class="email-wrapper" style="padding: 120px 0; background-color: #f7f9fc; position: relative; background-image: url(https://dt7xx7yzapqo1.cloudfront.net/static/splash-top-b.png); background-repeat: no-repeat; background-position: 100% 0;">
                 <div class="email-inner" style="position: relative; z-index: 1; border-radius: 10px; background-color: #fff; width: 760px; margin: auto; border: 1px solid #efefef; box-shadow: -5px 5px 15px rgba(0,0,0,.1);">
                     <div class="email-head" style="position: relative; border-bottom: 2px solid #dfe4ec; padding: 35px 0 35px;">
