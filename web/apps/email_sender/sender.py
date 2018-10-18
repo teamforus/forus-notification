@@ -1,3 +1,6 @@
+import os
+
+from django.conf import settings
 from mail_templated import send_mail
 
 from apps.notification_user.models import UserConnectionField
@@ -12,7 +15,7 @@ class Sender():
 
         for connection in connections:
             email = connection.value
-            send_mail(template, data, "noreply@forus.io", [email])
+            send_mail(template, data, settings.EMAIL_HOST_USER, [email])
             # djemail.send_email(
             #     to=email,
             #     template_name=template,  # .txt and/or .html
