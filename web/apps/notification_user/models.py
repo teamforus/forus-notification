@@ -14,7 +14,10 @@ class UserConnectionFieldManager(models.Manager):
         return super(UserConnectionFieldManager, self).filter(user=user)
 
     def find_emails_connection_by_user(self, user):
-        return self.find_email_by_user(user).filter(type=UserConnectionField.EMAIL_TYPE).all()
+        return self.find_type_connection_by_user(user, UserConnectionField.EMAIL_TYPE)
+
+    def find_type_connection_by_user(self, user, type):
+        return self.find_email_by_user(user).filter(type=type).all()
 
     def get_or_create(self, reffer_id, type, value):
         user, created = User.objects.get_or_create(reffer_id=reffer_id)

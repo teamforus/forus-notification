@@ -3,12 +3,12 @@ from apps.sender.views.api import ApiSendView
 
 
 class SponsorAddYouAsValidatorApi(ApiSendView):
-    serializer_class = serializers.SponsorAddYouAsValidatorSerializer
+    serializer_class = serializers.SponsorAddYouAsValidatorEmailSerializer
 
 
 
 class NewValidationRequestApi(ApiSendView):
-    serializer_class = serializers.NewValidationRequestSerializer
+    serializer_class = serializers.NewValidationRequestEmailSerializer
 
 
 

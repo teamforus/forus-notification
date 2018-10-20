@@ -148,7 +148,7 @@ USE_L10N = False
 
 
 FCM_DJANGO_SETTINGS = {
-        "FCM_SERVER_KEY": os.environ.get('FCM_SERVER_KEY', ''),
+        "FCM_SERVER_KEY": os.environ.get('FIREBASE_SERVER_KEY', ''),
          # true if you want to have only one active device per registered user at a time
          # default: False
         "ONE_DEVICE_PER_USER": False,

@@ -3,23 +3,23 @@ from apps.sender.views.api import ApiSendView
 
 
 class NewFund(ApiSendView):
-    serializer_class = serializers.NewFundSerializer
+    serializer_class = serializers.NewFundEmailSerializer
 
 
 class NewFundCreated(ApiSendView):
-    serializer_class = serializers.NewFundCreatedSerializer
+    serializer_class = serializers.NewFundCreatedEmailSerializer
 
 
 class ProviderAppliedView(ApiSendView):
-    serializer_class = serializers.ProviderAppliedSerializer
+    serializer_class = serializers.ProviderAppliedEmailSerializer
 
 
 class NewProductAddedView(ApiSendView):
-    serializer_class = serializers.NewProductAddedSerializer
+    serializer_class = serializers.NewProductAddedEmailSerializer
 
 
 class ProviderApprovedView(ApiSendView):
-    serializer_class = serializers.ProviderApprovedSerializer
+    serializer_class = serializers.ProviderApprovedEmailSerializer
 
     def get_data(self, ser):
         data = super(ProviderApprovedView, self).get_data(ser)

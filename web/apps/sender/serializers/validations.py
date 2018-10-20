@@ -1,9 +1,9 @@
 from rest_framework import serializers
 
-from apps.sender.serializers import BaseSerializer
+from apps.sender.serializers import BaseEmailSerializer
 
 
-class SponsorAddYouAsValidatorSerializer(BaseSerializer):
+class SponsorAddYouAsValidatorEmailSerializer(BaseEmailSerializer):
     sponsore_name = serializers.CharField()
     validator_name = serializers.CharField()
 
@@ -11,7 +11,7 @@ class SponsorAddYouAsValidatorSerializer(BaseSerializer):
         return '/validations/you_added_as_validator'
 
 
-class NewValidationRequestSerializer(BaseSerializer):
+class NewValidationRequestEmailSerializer(BaseEmailSerializer):
     validator_name = serializers.CharField()
 
     def get_template(self):
