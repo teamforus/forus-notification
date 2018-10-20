@@ -1,7 +1,10 @@
+import uuid
+
 from django.db import models
 
-
 # Create your models here.
+from fcm_django.models import FCMDevice
+
 
 class UserConnectionFieldManager(models.Manager):
     def get_queryset(self):
@@ -20,6 +23,18 @@ class UserConnectionFieldManager(models.Manager):
         return connection
 
 
+class UserConnectionFCMDeviceManager(models.Manager):
+    def get_queryset(self):
+        return super(UserConnectionFCMDeviceManager, self).get_queryset()
+
+    def get_or_create_by_connection(self, user_connection):
+        fcm_device, created = FCMDevice.objects.get_or_create(
+            registration_id = user_connection.value,
+            defaults= {'device_id': uuid.uuid4(), 'type': 'ios', 'name': user_connection.user.reffer_id, 'active': True}
+        )
+        return self.get_queryset().get_or_create(user_connection=user_connection, device=fcm_device)
+
+
 class User(models.Model):
     reffer_id = models.CharField('Id', max_length=1000)
 
@@ -29,10 +44,11 @@ class User(models.Model):
 
 class UserConnectionField(models.Model):
     EMAIL_TYPE = 1
-    GCS_TYPE = 2
+    FIREBASE_TYPE = 2
+
     TYPE_CHOICES = (
         (EMAIL_TYPE, 'Email'),
-        (GCS_TYPE, 'Google cloud message'),
+        (FIREBASE_TYPE, 'Firebase'),
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=True)
@@ -42,3 +58,10 @@ class UserConnectionField(models.Model):
     type = models.IntegerField(choices=TYPE_CHOICES, default=EMAIL_TYPE)
 
     objects = UserConnectionFieldManager()
+
+
+class UserConnectionFCMDevice(models.Model):
+    user_connection = models.ForeignKey(UserConnectionField, on_delete=models.CASCADE, blank=False, null=True)
+    device = models.ForeignKey(FCMDevice, on_delete=models.CASCADE, blank=False, null=True)
+
+    objects = UserConnectionFCMDeviceManager()
