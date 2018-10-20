@@ -18,7 +18,13 @@ class UserConnectionFieldManager(models.Manager):
 
     def get_or_create(self, reffer_id, type, value):
         user, created = User.objects.get_or_create(reffer_id=reffer_id)
-        connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user, value=value.strip())
+        value = value.strip()
+        if type == UserConnectionField.EMAIL_TYPE:
+            connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user)
+            connection.value = value
+            connection.save()
+        else:
+            connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user, value=value)
 
         return connection
 
@@ -29,8 +35,8 @@ class UserConnectionFCMDeviceManager(models.Manager):
 
     def get_or_create_by_connection(self, user_connection):
         fcm_device, created = FCMDevice.objects.get_or_create(
-            registration_id = user_connection.value,
-            defaults= {'device_id': uuid.uuid4(), 'type': 'ios', 'name': user_connection.user.reffer_id, 'active': True}
+            registration_id=user_connection.value,
+            defaults={'device_id': uuid.uuid4(), 'type': 'ios', 'name': user_connection.user.reffer_id, 'active': True}
         )
         return self.get_queryset().get_or_create(user_connection=user_connection, device=fcm_device)
 
