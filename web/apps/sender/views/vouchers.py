@@ -17,8 +17,13 @@ class ProviderAppliedView(ApiSendView):
 class NewProductAddedView(ApiSendView):
     serializer_class = serializers.NewProductAddedEmailSerializer
 
+
 class ProviderRejectedView(ApiSendView):
     serializer_class = serializers.ProviderRejectedSerializer
+
+
+class SendVoucherViaEmailView(ApiSendView):
+    serializer_class = serializers.SendVoucherViaEmailSerializer
 
 
 class ProviderApprovedView(ApiSendView):

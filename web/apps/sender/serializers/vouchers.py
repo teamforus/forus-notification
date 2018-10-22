@@ -57,3 +57,10 @@ class ProviderRejectedSerializer(BaseEmailSerializer):
 
     def get_template(self):
         return '/vouchers/provider_rejected'
+
+class SendVoucherViaEmailSerializer(BaseEmailSerializer):
+    name = serializers.CharField()
+    service_type = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/voucher_sended_via_email'
