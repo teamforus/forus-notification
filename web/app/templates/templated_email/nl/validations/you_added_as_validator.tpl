@@ -1,5 +1,7 @@
+
+{% extends "templated_email/base.tpl" %}
 {% block subject %}{{sponsore_name}}  heeft je toegevoegd als validator{% endblock %}
-{% block plain %}
+{% block html %}
   Geachte {{validator_name}},
 
     {{sponsore_name}} heeft je toegevoegd als validator.

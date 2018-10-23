@@ -1,5 +1,7 @@
+
+{% extends "templated_email/base.tpl" %}
 {% block subject %}{{provider_name}} wants to register for {{fund_name}}{% endblock %}
-{% block plain %}
+{% block html %}
 
   Dear {{sponsor_name}},
 

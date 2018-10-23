@@ -1,5 +1,7 @@
+{% extends "templated_email/base.tpl" %}
+
 {% block subject %}{{sponsore_name}} has assigned you as a validator{% endblock %}
-{% block plain %}
+{% block html %}
   Dear {{validator_name}},
 
     {{sponsore_name}} has assigned you as a validator.

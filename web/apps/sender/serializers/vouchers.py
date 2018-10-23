@@ -1,10 +1,10 @@
 from rest_framework import serializers
 
 from apps.notification_user.models import UserConnectionField
-from apps.sender.serializers import BaseSerializer
+from apps.sender.serializers import BaseEmailSerializer
 
 
-class NewFundSerializer(BaseSerializer):
+class NewFundEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     username = serializers.CharField()
 
@@ -12,7 +12,7 @@ class NewFundSerializer(BaseSerializer):
         return '/vouchers/new_fund'
 
 
-class NewFundCreatedSerializer(BaseSerializer):
+class NewFundCreatedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     requester_name = serializers.CharField()
     link = serializers.CharField()
@@ -21,7 +21,7 @@ class NewFundCreatedSerializer(BaseSerializer):
         return '/vouchers/new_fund_created'
 
 
-class ProviderApprovedSerializer(BaseSerializer):
+class ProviderApprovedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
@@ -31,7 +31,7 @@ class ProviderApprovedSerializer(BaseSerializer):
         return '/vouchers/provider_approved'
 
 
-class ProviderAppliedSerializer(BaseSerializer):
+class ProviderAppliedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
@@ -40,9 +40,27 @@ class ProviderAppliedSerializer(BaseSerializer):
         return '/vouchers/provider_applied'
 
 
-class NewProductAddedSerializer(BaseSerializer):
+class NewProductAddedEmailSerializer(BaseEmailSerializer):
     product_name = serializers.CharField()
     provider_name = serializers.CharField()
 
     def get_template(self):
         return '/vouchers/new_product_added'
+
+
+
+class ProviderRejectedSerializer(BaseEmailSerializer):
+    product_name = serializers.CharField()
+    sponsor_name = serializers.CharField()
+    provider_name = serializers.CharField()
+    fund_name = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/provider_rejected'
+
+class SendVoucherViaEmailSerializer(BaseEmailSerializer):
+    name = serializers.CharField()
+    service_type = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/voucher_sended_via_email'

@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from apps.sender.mixin import BaseSendMixin
 
 
+
 class ApiSendView(BaseSendMixin,generics.GenericAPIView):
     def get_data(self, ser):
         attrs = ser._validated_data
@@ -11,8 +12,6 @@ class ApiSendView(BaseSendMixin,generics.GenericAPIView):
         for rdata in attrs:
             data[rdata] = attrs[rdata]
         return data
-
-
 
     def post(self, request):
         ser = self.serializer_class(data=request.data)

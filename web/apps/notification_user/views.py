@@ -13,3 +13,6 @@ class AddConnectionView(UserConnectionMixin, generics.CreateAPIView):
 
     def perform_create(self, serializer):
         self.create_connection(serializer.user_id, serializer.type, serializer.value)
+
+
+
