@@ -23,11 +23,11 @@ class UserConnectionFieldManager(models.Manager):
         user, created = User.objects.get_or_create(reffer_id=reffer_id)
         value = value.strip()
         if type == UserConnectionField.EMAIL_TYPE:
-            connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user)
+            connection, created = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user)
             connection.value = value
             connection.save()
         else:
-            connection = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user, value=value)
+            connection, created = super(UserConnectionFieldManager, self).get_or_create(type=type, user=user, value=value)
 
         return connection
 
