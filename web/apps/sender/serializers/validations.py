@@ -12,7 +12,7 @@ class SponsorAddYouAsValidatorEmailSerializer(BaseEmailSerializer):
 
 
 class NewValidationRequestEmailSerializer(BaseEmailSerializer):
-    validator_name = serializers.CharField()
+    validator_dashboard_link = serializers.CharField()
 
     def get_template(self):
         return '/validations/new_validation_request'
