@@ -15,8 +15,7 @@ class NewFundEmailSerializer(BaseEmailSerializer):
 
 class NewFundCreatedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
-    requester_name = serializers.CharField()
-    link = serializers.CharField()
+    webshop_link = serializers.CharField()
 
     def get_template(self):
         return '/vouchers/new_fund_created'
