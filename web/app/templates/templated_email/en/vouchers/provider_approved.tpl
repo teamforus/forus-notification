@@ -2,11 +2,11 @@
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Your application for {{fund_name}}{% endblock %}
 {% block html %}
-  Your application is accepted!
+  Your application is accepted! <br/><br/>
 
-  Dear {{provider_name}},
+Dear {{ provider_name }}, <br/>
+You applied to join for {{ name_fund }} a while ago. <br/>
+The {{ name_sponsor }} has accepted your application. <br/>
 
-  On {{date_start}}  you’ve signed up for {{fund_name}}. {{sponsor_name}} has accepted your application.
-
-  From now on you can sell your products / services to customers who are eligible for {{fund_name}}
+From now on you can sell your products / services to customers who are eligible for {{ fund_name }}
 {% endblock %}

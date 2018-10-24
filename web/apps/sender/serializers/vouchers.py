@@ -25,7 +25,6 @@ class ProviderApprovedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
-    date_start = serializers.DateField(format="%d-%m-%Y")
 
     def get_template(self):
         return '/vouchers/provider_approved'
