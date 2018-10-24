@@ -53,6 +53,7 @@ class ProviderRejectedSerializer(BaseEmailSerializer):
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
     fund_name = serializers.CharField()
+    product_name = serializers.CharField()
 
     def get_template(self):
         return '/vouchers/provider_rejected'
