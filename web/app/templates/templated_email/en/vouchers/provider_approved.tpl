@@ -5,8 +5,8 @@
   Your application is accepted! <br/><br/>
 
 Dear {{ provider_name }}, <br/>
-You applied to join for {{ name_fund }} a while ago. <br/>
-The {{ name_sponsor }} has accepted your application. <br/>
+You applied to join for {{ fund_name }} a while ago. <br/>
+The {{ sponsor_name }} has accepted your application. <br/>
 
 From now on you can sell your products / services to customers who are eligible for {{ fund_name }}
 {% endblock %}

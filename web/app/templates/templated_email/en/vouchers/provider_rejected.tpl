@@ -1,11 +1,10 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}{{ product_name }} voucher is no longer valid.{% endblock %}
+{% block subject %}Your application for a fund.{% endblock %}
 {% block html %}
-    Dear citizen,
-    <br/>
-    {{ sponsor_name }} has rejected {{ provider_name }} to participate as a provider.
-    This means that you can no longer use {{ product_name }} voucher.
+   Dear {{ provider_name }}, <br/>
 
-    We apologize for the inconvenience.
+You applied to join for {{ fund_name }} a while ago. {{ sponsor_name }} of this fund has rejected your application. <br/>
+
+Contact {{ sponsor_name }} for the reason of rejection.
 {% endblock %}

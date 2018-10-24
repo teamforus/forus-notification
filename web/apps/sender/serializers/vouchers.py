@@ -50,9 +50,8 @@ class NewProductAddedEmailSerializer(BaseEmailSerializer):
 
 
 class ProviderRejectedSerializer(BaseEmailSerializer):
-    product_name = serializers.CharField()
-    sponsor_name = serializers.CharField()
     provider_name = serializers.CharField()
+    sponsor_name = serializers.CharField()
     fund_name = serializers.CharField()
 
     def get_template(self):
