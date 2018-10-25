@@ -5,7 +5,6 @@ from apps.sender.serializers import BaseEmailSerializer
 
 class SponsorAddYouAsValidatorEmailSerializer(BaseEmailSerializer):
     sponsore_name = serializers.CharField()
-    validator_name = serializers.CharField()
 
     def get_template(self):
         return '/validations/you_added_as_validator'
