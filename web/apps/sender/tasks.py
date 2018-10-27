@@ -12,7 +12,7 @@ def send_mobile_push(task, reffer_user_id, title, body):
     email_sender = FcmSender(user)
     email_sender.send_push(title, body)
 
-#@app.task(bind=True)
+@app.task(bind=True)
 def send_email(task, reffer_user_id, template, data):
     user = User.objects.filter(reffer_id=reffer_user_id).get()
     email_sender = EmailSender(user)
