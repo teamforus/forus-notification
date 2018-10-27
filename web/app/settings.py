@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'fcm_django',
     'mail_templated',
 
+    'apps.core',
     'apps.notification_user',
     'apps.sender',
     'apps.email_sender'
