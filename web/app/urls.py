@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+from decorator_include import decorator_include
 from django.conf.urls import url, include
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
@@ -23,7 +24,7 @@ from rest_framework.documentation import include_docs_urls
 
 from rest_framework.routers import DefaultRouter
 
-
+from apps.core.decorators import sign_request
 
 schema_view = get_swagger_view(title='API')
 
@@ -35,6 +36,6 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^swagger/$', schema_view),
-    url(r'^user/', include('apps.notification_user.urls', namespace='notification_user')),
-    url(r'^sender/', include('apps.sender.urls', namespace='sender')),
+    url(r'^user/', decorator_include(sign_request,'apps.notification_user.urls', namespace='notification_user')),
+    url(r'^sender/', decorator_include(sign_request, 'apps.sender.urls', namespace='sender')),
 )
