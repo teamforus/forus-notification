@@ -69,6 +69,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     'apps.sender.middleware.SenderMiddleWare',
+    # 'apps.sender.middleware.SenderMiddleWare',
 ]
 
 ROOT_URLCONF = 'app.urls'
