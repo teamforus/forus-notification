@@ -18,9 +18,10 @@ services:
     restart: always
     build: ./nginx/
     ports:
-      - "80:80"
+      - "${NGINX_PORT}:80"
     volumes:
       - /www/static
+    env_file: .env
     volumes_from:
       - web
     links:
