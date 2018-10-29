@@ -28,7 +28,7 @@ rundocker() {
     docker stop $(docker ps -a -q)
     echo ''
     echo 'Start containers'
-    docker-compose -p forus-notification up -d
+    docker-compose -p forusnotification up -d 
     echo ''
 }
 
@@ -39,37 +39,37 @@ start() {
 }
 
 migrate() {
-    docker exec -it forus-notification_web_1 python manage.py migrate
+    docker exec -it forusnotification_web_1 python manage.py migrate
 }
 
 logs() {
-  docker logs forus-notification_web_1
+  docker logs forusnotification_web_1
 }
 
 celery_logs() {
-  docker logs forus-notification_worker_1
+  docker logs forusnotification_worker_1
 }
 
 redis_logs() {
-  docker logs forus-notification_redis_1
+  docker logs forusnotification_redis_1
 }
 
 
 createsuperuser() {
-    docker exec -it forus-notification_web_1 python manage.py createsuperuser
+    docker exec -it forusnotification_web_1 python manage.py createsuperuser
 
 }
 
 
 makemigrations() {
-    docker exec -it forus-notification_web_1 python manage.py makemigrations
+    docker exec -it forusnotification_web_1 python manage.py makemigrations
 
 }
 
 
 collectstatic() {
-  #  docker exec -it forus-notification_web_1 bash -c "cd app && npm i && npm run build"
-    docker exec -it forus-notification_web_1 python manage.py collectstatic
+  #  docker exec -it forusnotification_web_1 bash -c "cd app && npm i && npm run build"
+    docker exec -it forusnotification_web_1 python manage.py collectstatic
 }
 
 
@@ -90,16 +90,16 @@ first_run() {
     local DB_USER=$(get_variable 'DB_USER')
     local DB_PASS=$(get_variable 'DB_PASS')
     rundocker
-    docker exec -it forus-notification_postgres_1 psql -U postgres -c "CREATE DATABASE $DB_NAME;"
-    docker exec -it forus-notification_postgres_1 psql -U postgres -c  "CREATE USER $DB_USER WITH ENCRYPTED PASSWORD '$DB_PASS';"
-    docker exec -it forus-notification_postgres_1 psql -U postgres -c  "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO  $DB_USER;"
+    docker exec -it forusnotification_postgres_1 psql -U postgres -c "CREATE DATABASE $DB_NAME;"
+    docker exec -it forusnotification_postgres_1 psql -U postgres -c  "CREATE USER $DB_USER WITH ENCRYPTED PASSWORD '$DB_PASS';"
+    docker exec -it forusnotification_postgres_1 psql -U postgres -c  "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO  $DB_USER;"
     start
 }
 
 update() {
    echo 'Build containers with cache'
-   docker-compose -p forus-notification build worker
-   docker-compose -p forus-notification build web
+   docker-compose -p forusnotification build worker
+   docker-compose -p forusnotification build web
 }
 
 
@@ -107,8 +107,8 @@ update() {
 
 build() {
    echo 'Build containers'
-   docker-compose -p forus-notification build worker --no-cache
-   docker-compose -p forus-notification build --no-cache
+   docker-compose -p forusnotification build worker --no-cache
+   docker-compose -p forusnotification build --no-cache 
 }
 
 

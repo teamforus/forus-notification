@@ -1,8 +1,10 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %} Er is een nieuw fonds toegevoegd{% endblock %}
+{% block subject %}Er is een nieuw fonds toegevoegd{% endblock %}
 {% block html %}
- Geachte {{requester_name}},
+ Beste inwoner,
 
-    Er is een nieuw fonds aangemaakt. Je voldoet aan de voorwaarden om mee te doen aan {{fund_name}}. Go naar {{link}}, log in op de webshop om je aan te melden voor dit fonds.
+ Er is een nieuw fonds aangemaakt. Je voldoet aan de voorwaarden om mee te doen aan {{ fund_name }}.
+     Go naar <a href="{{ webshop_link }}">{{webshop_link}}</a>, log in op de webshop om je aan te melden voor {{ fund_name }}.
+
 {% endblock %}
