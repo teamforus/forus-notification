@@ -1,5 +1,7 @@
+
+{% extends "templated_email/base.tpl" %}
 {% block subject %}Your application for {{fund_name}}{% endblock %}
-{% block plain %}
+{% block html %}
   Your application is accepted!
 
   Dear {{provider_name}},

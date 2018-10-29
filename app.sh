@@ -98,7 +98,8 @@ first_run() {
 
 update() {
    echo 'Build containers with cache'
-   docker-compose -p forus-notification build web 
+   docker-compose -p forus-notification build worker
+   docker-compose -p forus-notification build web
 }
 
 
@@ -106,6 +107,7 @@ update() {
 
 build() {
    echo 'Build containers'
+   docker-compose -p forus-notification build worker --no-cache
    docker-compose -p forus-notification build --no-cache 
 }
 

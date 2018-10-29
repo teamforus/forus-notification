@@ -1,5 +1,7 @@
+
+{% extends "templated_email/base.tpl" %}
 {% block subject %}A new fund is added{% endblock %}
-{% block plain %}
+{% block html %}
   Dear {{username}},
 
     A new fund is added. Your organisation meets the requirements to apply for this fund.
