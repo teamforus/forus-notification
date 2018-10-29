@@ -2,11 +2,10 @@
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Je aanmelding voor {{fund_name}}{% endblock %}
 {% block html %}
-  Je aanmelding is geaccepteerd!
+  Je aanmelding is geaccepteerd! <br/> <br/>
 
-  Geachte {{provider_name}},
+Beste  {{ provider_name }}, <br/>
+Kort geleden heb je je aangemeld voor {{ fund_name }}.{{ sposor_name }} heeft je aanmelding geaccepteerd. <br/><br/>
 
-  Je hebt op {{date_start}} een aanmelding gedaan voor  {{fund_name}}. {{sponsor_name}} heeft je verzoek geaccepteerd.
-
-  Dit betekent dat je vanaf nu je producten en/of diensten kan leveren aan klanten die recht hebben op {{fund_name}}
+Dit betekent dat je vanaf nu je producten en/of diensten kan leveren aan klanten die recht hebben op {{ fund_name }}
 {% endblock %}

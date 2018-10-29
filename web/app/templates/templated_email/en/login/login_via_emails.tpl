@@ -4,8 +4,8 @@
 {% block html %}
 Dear citizen,
 
-You’ve just requested to login on to the webshop.
-Click on the link below to continue logging in.
-    <br/>
-    <a href="{{ link }}">Link</a>
+You’ve just requested to login on to the {{ platform }}.
+Click on the <a href="{{ link }}">link</a> below to continue logging in.
+<br/>
+<a href="{{ link }}">{{ link }}</a>
 {% endblock %}

@@ -1,11 +1,11 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}{{ product_name }} voucher is niet meer geldig.{% endblock %}
+{% block subject %}Je aanmelding voor een fonds.{% endblock %}
 {% block html %}
-    Beste inwoner,
-    <br/>
-    {{ sponsor_name }} heeft {{ provider_name }}
-    geweigerd om verder deel te nemen als leverancier voor {{ fund_name }}. Dit betekent dat je {{ product_name }} voucher niet langer kan gebruiken.
-    Onze excuses voor het ongemak.
+   Beste {{ provider_name }}, <br/>
 
+Kort geleden heb je je aangemeld voor {{ fund_name }}.
+{{ sponsor_name }} heeft je aanmelding afgewezen.
+
+Wil je hiervan de reden weten? Neem dan contact op met {{ sponsor_name }}.
 {% endblock %}

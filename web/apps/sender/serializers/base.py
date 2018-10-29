@@ -4,6 +4,8 @@ from rest_framework import serializers
 
 class BaseSerializer(serializers.Serializer):
     reffer_id = serializers.CharField(allow_blank=False, min_length=1)
+    # public_key = serializers.CharField(allow_blank=False, min_length=1)
+    # sign = serializers.CharField(allow_blank=False, min_length=1)
 
     def validate(self, attrs):
         self.reffer_id = attrs['reffer_id']

@@ -4,9 +4,10 @@
 {% block html %}
 Beste inwoner,
 
-Je hebt zojuist aangegeven dat je wil inloggen op de webshop.
-Klik op onderstaande link om verder te gaan met inloggen.
+Je hebt zojuist aangegeven dat je wil inloggen op de {{ platform }}.
+Klik op onderstaande <a href="{{ link }}">link</a> om verder te gaan met inloggen.
 
     <br/>
-    <a href="{{ link }}">Link</a>
+    <a href="{{ link }}">{{ link }}</a>
 {% endblock %}
+

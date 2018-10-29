@@ -31,5 +31,5 @@ class ProviderApprovedView(ApiSendView):
 
     def get_data(self, ser):
         data = super(ProviderApprovedView, self).get_data(ser)
-        data['date_start'] = '{:%B %d, %Y}'.format(data['date_start'])
+        #data['date_start'] = '{:%B %d, %Y}'.format(data['date_start'])
         return data

@@ -35,6 +35,6 @@ urlpatterns = [
 
 urlpatterns += i18n_patterns(
     url(r'^swagger/$', schema_view),
-    url(r'^user/', include('apps.notification_user.urls', namespace='notification_user')),
-    url(r'^sender/', include('apps.sender.urls', namespace='sender')),
+    url(r'^user/', include('apps.notification_user.urls')),
+    url(r'^sender/', include('apps.sender.urls')),
 )

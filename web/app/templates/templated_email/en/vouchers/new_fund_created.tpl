@@ -4,5 +4,8 @@
 {% block html %}
  Dear {{requester_name}},
 
-    A new fund has been created. You are eligible to participate in {{fund_name}}. Go to {{link}}, log in to the web-shop to sign up for this fund.
+Dear citizen,
+
+    A new fund has been created. You are eligible to participate in{{ fund_name }}.
+    Go to <a href="{{ webshop_link }}">{{webshop_link}}</a>, log in to the webshop to sign up for {{ fund_name }}.
 {% endblock %}

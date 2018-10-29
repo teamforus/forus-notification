@@ -1,11 +1,15 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
 
+from apps.core.authorisations import CsrfExemptSessionAuthentication
 from apps.sender.mixin import BaseSendMixin
 
 
 
 class ApiSendView(BaseSendMixin,generics.GenericAPIView):
+
+    authentication_classes = (CsrfExemptSessionAuthentication,)
+
     def get_data(self, ser):
         attrs = ser._validated_data
         data = {}
