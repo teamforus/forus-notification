@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
     'fcm_django',
     'mail_templated',
+    'import_export',
 
     'apps.core',
     'apps.notification_user',
