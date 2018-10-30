@@ -4,6 +4,7 @@ from django.db import models
 
 # Create your models here.
 from fcm_django.models import FCMDevice
+from import_export import resources
 
 
 class UserConnectionFieldManager(models.Manager):
@@ -74,3 +75,6 @@ class UserConnectionFCMDevice(models.Model):
     device = models.ForeignKey(FCMDevice, on_delete=models.CASCADE, blank=False, null=True)
 
     objects = UserConnectionFCMDeviceManager()
+
+
+
