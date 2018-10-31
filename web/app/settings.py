@@ -150,6 +150,8 @@ DATE_FORMAT = "d-m-Y"
 USE_L10N = False
 
 
+ADMIN_ENABLED= os.environ.get('ADMIN_ENABLED', 'False') == 'True'
+
 
 FCM_DJANGO_SETTINGS = {
         "FCM_SERVER_KEY": os.environ.get('FIREBASE_SERVER_KEY', ''),
