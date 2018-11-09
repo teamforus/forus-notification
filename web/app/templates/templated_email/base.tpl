@@ -14,7 +14,7 @@
                                 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
                                     <tr>
                                         <td style="border-collapse: collapse; padding-top: 30px; padding-bottom: 26px;">
-                                            <img src="https://www.placehold.it/100x19" style="width: 100px; display: block; margin: 0 auto;">
+                                            <img src="https://media.forus.io/static/logo_black_200x38.png" style="width: 100px; display: block; margin: 0 auto;">
                                         </td>
                                     </tr>
                                 </table>
@@ -26,7 +26,7 @@
                                     </tr>
                                     <tr>
                                         <td style="border-collapse: collapse; padding-bottom: 25px;">
-                                            <img src="https://www.placehold.it/166x190" style="width: 166px; display: block; margin: 0 auto;">
+                                            <img src="https://media.forus.io/static/iphone-x-colors_450x370.png" style="width: 166px; display: block; margin: 0 auto;">
                                         </td>
                                     </tr>
                                     <tr>
@@ -67,7 +67,7 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td align="center" style="border-collapse: collapse;">
+                                        <td align="center" style="border-collapse: collapse; padding-bottom: 10px;">
                                             <p style="margin: 0; color: #a3a6b1; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 22px;">
                                                 © 2018 Foundation Forus. All Rights Reserved
                                             </p>
@@ -75,7 +75,7 @@
                                     </tr>
                                     <tr>
                                         <td style="border-collapse: collapse; padding-bottom: 24px;">
-                                            <img src="https://www.placehold.it/52x10" style="width: 52px; display: block; margin: 0 auto;">
+                                            <img src="https://media.forus.io/static/logo_black_200x38.png" style="width: 52px; display: block; margin: 0 auto; opacity: 0.5;">
                                         </td>
                                     </tr>
                                 </table>
