@@ -26,7 +26,7 @@
                                     </tr>
                                     <tr>
                                         <td style="border-collapse: collapse; padding-bottom: 25px;">
-                                            <img src="https://media.forus.io/static/iphone-x-colors_450x370.png" style="width: 166px; display: block; margin: 0 auto;">
+                                            <img src="https://media.forus.io/static/iphone_shield_594x594.png" style="width: 297px; display: block; margin: 0 auto;">
                                         </td>
                                     </tr>
                                     <tr>
