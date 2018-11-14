@@ -39,38 +39,43 @@ start() {
 }
 
 migrate() {
-    docker exec -it forus-notification_web_1 python manage.py migrate
+    docker exec -it $(get_container_name 'web') python manage.py migrate
 }
 
 logs() {
-  docker logs forus-notification_web_1
+  docker logs $(get_container_name 'web')
 }
 
 celery_logs() {
-  docker logs forus-notification_worker_1
+  docker logs $(get_container_name 'worker')
 }
 
 redis_logs() {
-  docker logs forus-notification_redis_1
+  docker logs $(get_container_name 'redis')
 }
 
 
 createsuperuser() {
-    docker exec -it forus-notification_web_1 python manage.py createsuperuser
+    docker exec -it $(get_container_name 'web') python manage.py createsuperuser
 
 }
 
 
 makemigrations() {
-    docker exec -it forus-notification_web_1 python manage.py makemigrations
+    docker exec -it $(get_container_name 'web') python manage.py makemigrations
 
 }
 
 
 collectstatic() {
-  #  docker exec -it forus-notification_web_1 bash -c "cd app && npm i && npm run build"
-    docker exec -it forus-notification_web_1 python manage.py collectstatic
+  #  docker exec -it $(get_container_name 'web') bash -c "cd app && npm i && npm run build"
+    docker exec -it $(get_container_name 'web') python manage.py collectstatic
 }
+
+get_container_name() {
+   docker ps -a --filter="name=forus-notification_$1" --format '{{.Names}}'
+}
+
 
 
 
@@ -90,9 +95,10 @@ first_run() {
     local DB_USER=$(get_variable 'DB_USER')
     local DB_PASS=$(get_variable 'DB_PASS')
     rundocker
-    docker exec -it forus-notification_postgres_1 psql -U postgres -c "CREATE DATABASE $DB_NAME;"
-    docker exec -it forus-notification_postgres_1 psql -U postgres -c  "CREATE USER $DB_USER WITH ENCRYPTED PASSWORD '$DB_PASS';"
-    docker exec -it forus-notification_postgres_1 psql -U postgres -c  "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO  $DB_USER;"
+
+    docker exec -it $(get_container_name 'postgres') psql -U postgres -c "CREATE DATABASE $DB_NAME;"
+    docker exec -it $(get_container_name 'postgres') psql -U postgres -c  "CREATE USER $DB_USER WITH ENCRYPTED PASSWORD '$DB_PASS';"
+    docker exec -it $(get_container_name 'postgres') psql -U postgres -c  "GRANT ALL PRIVILEGES ON DATABASE $DB_NAME TO  $DB_USER;"
     start
 }
 

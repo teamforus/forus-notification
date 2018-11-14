@@ -21,12 +21,12 @@
                                 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; background: #fff; margin: 0px auto;" bgcolor="#fff">
                                     <tr>
                                         <td style="border-collapse: collapse; padding: 24px 24px 32px;">
-                                            <h1 style="margin: 0 auto; color: #2e3238; font-size: 36px; line-height: 1.1; font-weight: bold;">Log in to the Me app</span>
+                                                <h1 style="margin: 0 auto; color: #2e3238; font-size: 36px; line-height: 1.1; font-weight: bold;"> {% block title %}{% endblock %}</h1>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td style="border-collapse: collapse; padding-bottom: 25px;">
-                                            <img src="https://media.forus.io/static/iphone_shield_594x594.png" style="width: 297px; display: block; margin: 0 auto;">
+                                            <img src="{% block header_image %}" style="width: 297px; display: block; margin: 0 auto;">
                                         </td>
                                     </tr>
                                     <tr>
@@ -45,7 +45,7 @@
                                             <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 166px!important; text-align: center; margin: 0px auto;">
                                                 <tr>
                                                     <td align="center" style="border-collapse: collapse; background: #315efd; border-radius: 3px;">
-                                                        <a href="https://www.google.com" target="_blank" style="display: block; width: 100%; text-align: center; color: #fff; font-size: 14px; font-weight: bold; letter-spacing: 2px; line-height: 46px; text-transform: uppercase; text-decoration: none;">Inloggen</a>
+                                                        <a href="{% block button_link %}{% endblock %}" target="_blank" style="display: block; width: 100%; text-align: center; color: #fff; font-size: 14px; font-weight: bold; letter-spacing: 2px; line-height: 46px; text-transform: uppercase; text-decoration: none;">{% block button_text %}{% endblock %}</a>
                                                     </td>
                                                 </tr>
                                             </table>
@@ -68,16 +68,10 @@
                                     </tr>
                                     <tr>
                                         <td align="center" style="border-collapse: collapse; padding-bottom: 10px;">
-                                            <p style="margin: 0; color: #a3a6b1; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 22px;">
-                                                © 2018 Foundation Forus. All Rights Reserved
-                                            </p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="border-collapse: collapse; padding-bottom: 24px;">
                                             <img src="https://media.forus.io/static/logo_black_200x38.png" style="width: 52px; display: block; margin: 0 auto; opacity: 0.5;">
                                         </td>
                                     </tr>
+
                                 </table>
                             </div>
                         </td>
