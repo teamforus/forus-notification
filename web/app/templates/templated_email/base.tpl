@@ -4,29 +4,86 @@
     <html>
         <head>
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-            <style>
-                body {
-                background-color: #f7f9fc;
-                margin: 0;
-                padding: 0;
-                }
-            </style>
         </head>
-        <body>
-        <body>
-            <div class="email-wrapper" style="padding: 120px 0; background-color: #f7f9fc; position: relative; background-image: url(https://dt7xx7yzapqo1.cloudfront.net/static/splash-top-b.png); background-repeat: no-repeat; background-position: 100% 0;">
-                <div class="email-inner" style="position: relative; z-index: 1; border-radius: 10px; background-color: #fff; width: 760px; margin: auto; border: 1px solid #efefef; box-shadow: -5px 5px 15px rgba(0,0,0,.1);">
-                    <div class="email-head" style="position: relative; border-bottom: 2px solid #dfe4ec; padding: 35px 0 35px;">
-                        <img src="https://dt7xx7yzapqo1.cloudfront.net/static/forus-logo-color.png" style="max-height: 55px; display: block; margin: 0 auto;">
-                    </div>
-                    <div class="email-body" style="padding: 35px 70px 15px; border-bottom: 3px solid #dfe4ec; position: relative; text-align: center;">
-                         <div class="paragraph" style="margin: 0 0 40px; font: 400 16px/24px Arial, sans-serif; color: #2b333b;">
-                            {% block html %}{% endblock %}
-                         </div>
-                    </div>
-                </div>
-            </div>
-            <div id="apiary-browser-extension"></div>
+        <body style="width: 100% !important; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; background: #f6f5f5; margin: 0; padding: 0;" bgcolor="#f6f5f5">
+            <center>
+                <table id="wrapperTable" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; max-width: 600px !important; line-height: 100% !important; background: #fff; margin: 0 auto; padding: 0;" bgcolor="#fff">
+                    <tr>
+                        <td valign="top" align="center" style="border-collapse: collapse;">
+                            <div id="wrapper" style="font-family: Helvetica, Arial, ArialMT, sans-serif; width: 100%; max-width: 600px; overflow: hidden; color: #2e3238; font-size: 0; background: #f6f5f5; margin: 0 auto;">
+                                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
+                                    <tr>
+                                        <td style="border-collapse: collapse; padding-top: 30px; padding-bottom: 26px;">
+                                            <img src="https://media.forus.io/static/logo_black_200x38.png" style="width: 100px; display: block; margin: 0 auto;">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; background: #fff; margin: 0px auto;" bgcolor="#fff">
+                                    <tr>
+                                        <td style="border-collapse: collapse; padding: 24px 24px 32px;">
+                                            <h1 style="margin: 0 auto; color: #2e3238; font-size: 36px; line-height: 1.1; font-weight: bold;">Log in to the Me app</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-collapse: collapse; padding-bottom: 25px;">
+                                            <img src="https://media.forus.io/static/iphone_shield_594x594.png" style="width: 297px; display: block; margin: 0 auto;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-collapse: collapse; padding-left: 24px; padding-right: 24px;">
+                                            <p style="margin: 0; color: #2e3238; font-family: Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
+                                                {% block html %}{% endblock %}
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-collapse: collapse; padding-bottom: 25px;">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-collapse: collapse;">
+                                            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 166px!important; text-align: center; margin: 0px auto;">
+                                                <tr>
+                                                    <td align="center" style="border-collapse: collapse; background: #315efd; border-radius: 3px;">
+                                                        <a href="https://www.google.com" target="_blank" style="display: block; width: 100%; text-align: center; color: #fff; font-size: 14px; font-weight: bold; letter-spacing: 2px; line-height: 46px; text-transform: uppercase; text-decoration: none;">Inloggen</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-collapse: collapse; padding-bottom: 25px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
+                                    <tr>
+                                        <td align="center" style="border-collapse: collapse; padding-top: 22px; padding-bottom: 37px">
+                                            <p style="margin: 0; color: #2e3238; font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 22px;">
+                                                <a href="mailto:info@forus.io" style="color: #2e3238; text-decoration: underline;">info@forus.io</a>
+                                                <br />
+                                                Foundation Forus, Groningen, Netherlands
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="border-collapse: collapse; padding-bottom: 10px;">
+                                            <p style="margin: 0; color: #a3a6b1; font-family: Helvetica, Arial, sans-serif; font-size: 11px; line-height: 22px;">
+                                                © 2018 Foundation Forus. All Rights Reserved
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="border-collapse: collapse; padding-bottom: 24px;">
+                                            <img src="https://media.forus.io/static/logo_black_200x38.png" style="width: 52px; display: block; margin: 0 auto; opacity: 0.5;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </center>
         </body>
     </html>
 {{ TAG_END_HTML }}
