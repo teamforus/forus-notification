@@ -6,7 +6,7 @@
 {% block title %}Log in op de Me app{% endblock %}
 {% block header_image %} https://media.forus.io/static/iphone_shield_594x594.png {% endblock %}
 {% block html %}
-    Beste gebrauker,
+    Beste gebruiker,
     <br/>
     Je hebt zojuist aangegeven dat je wil inloggen op de {{ platform }}.
     <br/>
