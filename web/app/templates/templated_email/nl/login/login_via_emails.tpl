@@ -3,7 +3,7 @@
 {% block subject %}Jouw inloggegevens{% endblock %}
 {% block button_text %}Inloggen{% endblock %}
 {% block button_link %}{{ link }}{% endblock %}
-{% block title %}Log in op de Me app{% endblock %}
+{% block title %}Log in op de {{ platform }}{% endblock %}
 {% block header_image %} https://media.forus.io/static/iphone_shield_594x594.png {% endblock %}
 {% block html %}
     Beste gebruiker,
