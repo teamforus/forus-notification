@@ -11,13 +11,13 @@
                     <tr>
                         <td valign="top" align="center" style="border-collapse: collapse;">
                             <div id="wrapper" style="font-family: Helvetica, Arial, ArialMT, sans-serif; width: 100%; max-width: 600px; overflow: hidden; color: #2e3238; font-size: 0; background: #f6f5f5; margin: 0 auto;">
-                                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
+                                <!--<table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
                                     <tr>
                                         <td style="border-collapse: collapse; padding-top: 30px; padding-bottom: 26px;">
                                             <img src="https://media.forus.io/static/logo_black_200x38.png" style="width: 100px; display: block; margin: 0 auto;">
                                         </td>
                                     </tr>
-                                </table>
+                                </table>-->
                                 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; background: #fff; margin: 0px auto;" bgcolor="#fff">
                                     <tr>
                                         <td style="border-collapse: collapse; padding: 24px 24px 32px;">
@@ -56,7 +56,7 @@
                                         </td>
                                     </tr>
                                 </table>
-                                <table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
+                                <!--<table cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-size: 0; width: 100% !important; text-align: center; margin: 0px auto;">
                                     <tr>
                                         <td align="center" style="border-collapse: collapse; padding-top: 22px; padding-bottom: 37px">
                                             <p style="margin: 0; color: #2e3238; font-family: Helvetica, Arial, sans-serif; font-size: 12px; line-height: 22px;">
@@ -72,7 +72,7 @@
                                         </td>
                                     </tr>
 
-                                </table>
+                                </table>-->
                             </div>
                         </td>
                     </tr>
