@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'fcm_django',
     'mail_templated',
     'import_export',
+    'django_twilio',
 
     'apps.core',
     'apps.notification_user',
@@ -148,6 +149,18 @@ LOCALE_PATHS = (
 
 DATE_FORMAT = "d-m-Y"
 USE_L10N = False
+
+
+ADMIN_ENABLED= os.environ.get('ADMIN_ENABLED', 'False') == 'True'
+
+#TWILLIO
+DJANGO_TWILIO_FORGERY_PROTECTION = False
+DJANGO_TWILIO_BLACKLIST_CHECK = True
+
+TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID', None)
+TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN', None)
+TWILIO_PHONE_NUMBER = os.environ.get('TWILIO_PHONE_NUMBER', None)
+
 
 
 
