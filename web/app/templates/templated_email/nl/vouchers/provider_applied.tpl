@@ -1,13 +1,13 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %} {{ provider_name }} wil zich aanmelden voor {{ fund_name }}{% endblock %}
+{% block subject %} {{ provider_name }} wilt zich aanmelden voor {{ fund_name }}{% endblock %}
 {% block html %}
     Beste {{ sponsor_name }},
     <br/>
     Er is een aanmelding binnengekomen om deel te nemen aan {{ fund_name }}.
     <br/>
     <br/>
-    Controleer of deze {{ provider_name }} voldoet aan je voorwaarden om deel te nemen.
+    Controleer of deze {{ provider_name }} voldoet aan uw voorwaarden om deel te nemen.
     <br/>
-    Meld je aan op het sponsor dashboard <a href="{{ sponsor_dashboard_link }}" target="_blank" style="color: #315efd; text-decoration: underline;">{{ sponsor_dashboard_link }}</a> om deze aanvraag te behandelen.
+    Meld u aan op het sponsor dashboard <a href="{{ sponsor_dashboard_link }}" target="_blank" style="color: #315efd; text-decoration: underline;">{{ sponsor_dashboard_link }}</a> om deze aanvraag te behandelen.
 {% endblock %}
