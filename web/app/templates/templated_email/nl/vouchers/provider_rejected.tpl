@@ -6,7 +6,7 @@
     <br/>
     Kort geleden heeft u zich aangemeld voor {{ fund_name }}.
     <br/>
-    {{ sponsor_name }} heeft u aanmelding afgewezen.
+    {{ sponsor_name }} heeft uw aanmelding afgewezen.
     <br/>
     <br/>
     Wilt u hiervan de reden weten? Neem dan contact op met {{ sponsor_name }}.
