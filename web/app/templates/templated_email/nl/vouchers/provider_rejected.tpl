@@ -11,4 +11,10 @@
     <br/>
     <br/>
     Wilt u hiervan de reden weten? Neem dan contact op met {{ sponsor_name }}.
+    <br/>
+    <br/>
+    Met vriendelijke groet,
+    <br/>
+    <br/>
+    {{ sponsor_name }}
 {% endblock %}
