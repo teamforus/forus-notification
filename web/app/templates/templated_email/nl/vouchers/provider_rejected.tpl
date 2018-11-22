@@ -4,6 +4,7 @@
 {% block html %}
     Beste {{ provider_name }},
     <br/>
+    <br/>
     Kort geleden heeft u zich aangemeld voor {{ fund_name }}.
     <br/>
     {{ sponsor_name }} heeft uw aanmelding afgewezen.
