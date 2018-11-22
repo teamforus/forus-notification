@@ -2,7 +2,7 @@
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Uw aanmelding voor {{fund_name}}{% endblock %}
 {% block html %}
-    <h2>Uw aanmelding is geaccepteerd!</h2>
+    Uw aanmelding is geaccepteerd!
     <br/>
     <br/>
     Beste {{ provider_name }},
