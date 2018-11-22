@@ -1,8 +1,10 @@
 
 {% extends "templated_email/base.tpl" %}
 {% block subject %} {{ provider_name }} wilt zich aanmelden voor {{ fund_name }}{% endblock %}
+{% block button_link %}{{ sponsor_dashboard_link }}{% endblock %}
 {% block html %}
     Beste {{ sponsor_name }},
+    <br/>
     <br/>
     Er is een aanmelding binnengekomen om deel te nemen aan {{ fund_name }}.
     <br/>
