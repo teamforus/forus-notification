@@ -4,7 +4,7 @@
 {% block html %}
     Beste inwoner,
     <br/>
-    Er is een nieuw fonds aangemaakt. Je voldoet aan de voorwaarden om mee te doen aan {{fund_name}}. Log in op het leveranciers dashboard om je aan te melden.
+    Er is een nieuw fonds aangemaakt. U voldoet aan de voorwaarden om mee te doen aan {{fund_name}}. Log in op het leveranciers dashboard om u aan te melden.
     <br/>
     <br/>
     <a href="{{ provider_dashboard_link }}" target="_blank" style="color: #315efd; text-decoration: underline;">{{ provider_dashboard_link }}</a>
