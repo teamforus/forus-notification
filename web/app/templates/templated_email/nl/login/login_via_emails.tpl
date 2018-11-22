@@ -1,6 +1,6 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}Uw inloggegevens{% endblock %}
+{% block subject %}Inloggen op {{ platform }}{% endblock %}
 {% block button_text %}Inloggen{% endblock %}
 {% block button_link %}{{ link }}{% endblock %}
 {% block title %}Log in op {{ platform }}{% endblock %}
