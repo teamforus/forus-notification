@@ -62,3 +62,10 @@ class SendVoucherViaEmailSerializer(BaseEmailSerializer):
 
     def get_template(self):
         return '/vouchers/voucher_sended_via_email'
+
+class SuccessPaymentSerializer(BaseEmailSerializer):
+    fund_name = serializers.CharField()
+    current_budget = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/payment_success'

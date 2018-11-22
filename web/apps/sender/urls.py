@@ -6,14 +6,16 @@ from apps.sender import views
 urlpatterns = [
 
     url(r'^mobile/push', views.PushNotificationView.as_view(), name='mobile-send-push'),
+    url(r'^mobile/sms', views.SmsNotificationView.as_view(), name='mobile-send-sms'),
     # url(r'^products$', views.ProductList.as_view(), name='product.py-list'),
-    url(r'^vouchers/new_fund$', views.NewFund.as_view(), name='new-fund-email'),
-    url(r'^vouchers/new_fund_created$', views.NewFundCreated.as_view(), name='new-fund-created-email'),
+    url(r'^vouchers/new_fund', views.NewFund.as_view(), name='new-fund-email'),
+    url(r'^vouchers/new_fund_created', views.NewFundCreated.as_view(), name='new-fund-created-email'),
     url(r'^vouchers/provider_approved', views.ProviderApprovedView.as_view(), name='provider-approved-email'),
     url(r'^vouchers/provider_applied', views.ProviderAppliedView.as_view(), name='provider-applied-email'),
     url(r'^vouchers/new_product_added', views.NewProductAddedView.as_view(), name='new-product-added-email'),
     url(r'^vouchers/provider_rejected', views.ProviderRejectedView.as_view(), name='provider-rejected-email'),
     url(r'^vouchers/sended_via_email', views.SendVoucherViaEmailView.as_view(), name='sended-via-email'),
+    url(r'^vouchers/payment_success', views.PaymentSuccessView.as_view(), name='payment-success'),
 
     url(r'^login/login_via_email', views.LoginViaEmail.as_view(), name='login-via-email'),
 
