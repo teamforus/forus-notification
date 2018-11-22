@@ -1,13 +1,13 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}Je aanmelding voor een fonds.{% endblock %}
+{% block subject %}Uw aanmelding voor een fonds.{% endblock %}
 {% block html %}
     Beste {{ provider_name }},
     <br/>
-    Kort geleden heb je je aangemeld voor {{ fund_name }}.
+    Kort geleden heeft u zich aangemeld voor {{ fund_name }}.
     <br/>
-    {{ sponsor_name }} heeft je aanmelding afgewezen.
+    {{ sponsor_name }} heeft u aanmelding afgewezen.
     <br/>
     <br/>
-    Wil je hiervan de reden weten? Neem dan contact op met {{ sponsor_name }}.
+    Wilt u hiervan de reden weten? Neem dan contact op met {{ sponsor_name }}.
 {% endblock %}
