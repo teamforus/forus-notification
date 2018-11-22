@@ -10,7 +10,7 @@
     <br/>
     Kort geleden heeft u zich aangemeld voor {{ fund_name }}.
     <br/>
-    {{ sposor_name }} heeft uw aanmelding geaccepteerd.
+    {{ sponsor_name }} heeft uw aanmelding geaccepteerd.
     <br/>
     <br/>
     Dit betekent dat u vanaf nu uw aanbiedingen kan leveren aan klanten die recht hebben op {{ fund_name }}
@@ -19,5 +19,5 @@
     Met vriendelijke groet,
     <br/>
     <br/>
-    {{ sposor_name }}
+    {{ sponsor_name }}
 {% endblock %}
