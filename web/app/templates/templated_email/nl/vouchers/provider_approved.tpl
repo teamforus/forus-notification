@@ -19,5 +19,5 @@
     Met vriendelijke groet,
     <br/>
     <br/>
-    {{ sponsor_name }}
+    {{ sponsor_name }}.
 {% endblock %}
