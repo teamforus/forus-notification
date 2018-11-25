@@ -9,7 +9,7 @@ class BaseSendMixin(object):
         send_mobile_sms(self, phone, title)
 
     def send(self, reffer_user_id, template, data):
-        send_email.delay(reffer_user_id, template, data)
+        send_email(reffer_user_id, template, data)
         pass
 
 
