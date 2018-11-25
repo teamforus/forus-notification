@@ -21,9 +21,8 @@ class Sender():
 
     def send_email_with_connection(self, template, data, email):
 
-        for iteration in range(10):
+        for iteration in range(len(settings.EMAIL_CONNACTIONS)-1):
             try:
-                print(settings.EMAIL_CONNACTIONS)
                 smtp_connection = get_connection(
                     host=settings.EMAIL_CONNACTIONS[iteration].get('EMAIL_HOST'),
                     port=settings.EMAIL_CONNACTIONS[iteration].get('EMAIL_PORT'),
