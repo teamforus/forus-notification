@@ -4,6 +4,17 @@ from apps.notification_user.models import UserConnectionField
 from apps.sender.serializers import BaseEmailSerializer
 
 
+class ForusUsersCalcSerializer(BaseEmailSerializer):
+    fund_name = serializers.CharField()
+    sponsor_name = serializers.CharField()
+    sponsor_amount = serializers.CharField()
+    provider_amount = serializers.CharField()
+    requester_amount = serializers.CharField()
+    total_amount = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/forus_users_calc'
+
 class NewFundEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     provider_dashboard_link = serializers.CharField()
@@ -62,6 +73,14 @@ class ProviderRejectedSerializer(BaseEmailSerializer):
 
     def get_template(self):
         return '/vouchers/provider_rejected'
+
+class ShareProductSerializer(BaseEmailSerializer):
+    product_name = serializers.CharField()
+    qr_url = serializers.CharField()
+    requester_email = serializers.CharField()
+    reason = serializers.CharField()
+    def get_template(self):
+        return '/vouchers/share_product' 
 
 class SendVoucherViaEmailSerializer(BaseEmailSerializer):
     fund_product_name = serializers.CharField()
