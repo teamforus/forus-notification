@@ -23,6 +23,8 @@ class NewProductAddedView(ApiSendView):
 class ProviderRejectedView(ApiSendView):
     serializer_class = serializers.ProviderRejectedSerializer
 
+class ShareProductView(ApiSendView):
+    serializer_class = serializers.ShareProductSerializer
 
 class SendVoucherViaEmailView(ApiSendView):
     serializer_class = serializers.SendVoucherViaEmailSerializer

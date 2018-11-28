@@ -15,6 +15,7 @@ urlpatterns = [
     url(r'^vouchers/provider_applied', views.ProviderAppliedView.as_view(), name='provider-applied-email'),
     url(r'^vouchers/new_product_added', views.NewProductAddedView.as_view(), name='new-product-added-email'),
     url(r'^vouchers/provider_rejected', views.ProviderRejectedView.as_view(), name='provider-rejected-email'),
+    url(r'^vouchers/share_product', views.ShareProductView.as_view(), name='share-product-email'),
     url(r'^vouchers/sended_via_email', views.SendVoucherViaEmailView.as_view(), name='sended-via-email'),
     url(r'^vouchers/payment_success', views.PaymentSuccessView.as_view(), name='payment-success'),
 
