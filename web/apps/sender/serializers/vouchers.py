@@ -61,7 +61,7 @@ class ShareProductSerializer(BaseEmailSerializer):
     qr_url = serializers.CharField()
     requester_email = serializers.CharField()
     reason = serializers.CharField()
-     def get_template(self):
+    def get_template(self):
         return '/vouchers/share_product' 
 
 class SendVoucherViaEmailSerializer(BaseEmailSerializer):
