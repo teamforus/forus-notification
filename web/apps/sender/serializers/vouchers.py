@@ -30,6 +30,13 @@ class NewFundCreatedEmailSerializer(BaseEmailSerializer):
     def get_template(self):
         return '/vouchers/new_fund_created'
 
+class ForusNewFundCreatedEmailSerializer(BaseEmailSerializer):
+    fund_name = serializers.CharField()
+    sponsor_name = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/forus_new_fund_created'
+
 
 class ProviderApprovedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
