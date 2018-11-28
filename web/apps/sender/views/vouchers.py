@@ -5,6 +5,8 @@ from apps.sender.views.api import ApiSendView
 class NewFund(ApiSendView):
     serializer_class = serializers.NewFundEmailSerializer
 
+class ForusUsersCalc(ApiSendView):
+    serializer_class = serializers.ForusUsersCalcSerializer
 
 class NewFundCreated(ApiSendView):
     serializer_class = serializers.NewFundCreatedEmailSerializer
