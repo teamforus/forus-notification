@@ -33,7 +33,7 @@ class ProviderAppliedEmailSerializer(BaseEmailSerializer):
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
     fund_name = serializers.CharField()
-    sponsor_dashboard_link= serializers.CharField()
+    sponsor_dashboard_link = serializers.CharField()
 
     def get_template(self):
         return '/vouchers/provider_applied'
@@ -47,7 +47,6 @@ class NewProductAddedEmailSerializer(BaseEmailSerializer):
         return '/vxouchers/new_product_added'
 
 
-
 class ProviderRejectedSerializer(BaseEmailSerializer):
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
@@ -56,12 +55,14 @@ class ProviderRejectedSerializer(BaseEmailSerializer):
     def get_template(self):
         return '/vouchers/provider_rejected'
 
+
 class SendVoucherViaEmailSerializer(BaseEmailSerializer):
     fund_product_name = serializers.CharField()
     qr_url = serializers.CharField()
 
     def get_template(self):
         return '/vouchers/voucher_sended_via_email'
+
 
 class SuccessPaymentSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()

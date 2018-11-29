@@ -138,7 +138,7 @@ EMAIL_CONNACTIONS = list([
     }
 ])
 EMAIL_CONNACTIONS =  EMAIL_CONNACTIONS + list(json.loads(os.environ.get('EMAIL_CONNACTIONS', '[]')))
-print(EMAIL_CONNACTIONS)
+
 
 
 
