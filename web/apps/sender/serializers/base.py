@@ -3,8 +3,8 @@ from rest_framework import serializers
 
 
 class BaseSerializer(serializers.Serializer):
-    reffer_id = serializers.CharField(allow_blank=True)
-    email = serializers.CharField(allow_blank=True)
+    reffer_id = serializers.CharField(allow_blank=True, allow_null=True)
+    email = serializers.CharField(allow_blank=True, allow_null=True)
     # public_key = serializers.CharField(allow_blank=False, min_length=1)
     # sign = serializers.CharField(allow_blank=False, min_length=1)
 
