@@ -4,8 +4,9 @@
 {% block html %}
     Beste validator,
     <br/>
+    <br/>
     {{ sponsore_name }} heeft u toegevoegd als validator.
     <br/>
-    Vanaf nu kunt u aanvragers toevoegen, dit kunt u doen door naar het dashbaord te gaan een een .CSV bestand te uploaden.
+    Vanaf nu kunt u aanvragers toevoegen, dit kunt u doen door naar het dashboard te gaan een een .CSV bestand te uploaden.
     <br/>
 {% endblock %}
