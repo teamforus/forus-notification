@@ -36,7 +36,11 @@ def send_mobile_push(self, reffer_user_id, title, body):
     email_sender.send_push(title, body)
 
 @app.task(bind=True)
-def send_email(self, reffer_user_id, template, data):
-    user = User.objects.filter(reffer_id=reffer_user_id).get()
-    email_sender = EmailSender(user)
+def send_email(self, reffer_user_id, email, template, data):
+    print(reffer_user_id)
+    if reffer_user_id:
+        user = User.objects.filter(reffer_id=reffer_user_id).get()
+    else:
+        user = None
+    email_sender = EmailSender(user, email)
     email_sender.send_email(template, data)

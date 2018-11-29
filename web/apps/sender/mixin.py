@@ -8,8 +8,8 @@ class BaseSendMixin(object):
     def send_sms(self, phone, title):
         send_mobile_sms(self, phone, title)
 
-    def send(self, reffer_user_id, template, data):
-        send_email.delay(reffer_user_id, template, data)
+    def send(self, reffer_user_id, email, template, data):
+        send_email.delay(reffer_user_id, email, template, data)
         pass
 
 

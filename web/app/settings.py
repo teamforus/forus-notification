@@ -27,7 +27,7 @@ SECRET_KEY = 'megg_yej86ln@xao^+)it4e&ueu#!4tl9p1h%2sjr7ey0)m25f'
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
+# DEBUG = True
 
 
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '[]')
@@ -125,14 +125,21 @@ CELERY_TASK_SERIALIZER = 'json'
 # }
 
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = os.environ.get('EMAIL_HOST', '')
-EMAIL_PORT = os.environ.get('EMAIL_PORT', '')
-EMAIL_FROM = os.environ.get('EMAIL_FROM', 'no-reply@forus.io')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True') == 'True'
-EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False') == 'True'
+EMAIL_CONNACTIONS = list([
+    {
+        "EMAIL_BACKEND": 'django.core.mail.backends.smtp.EmailBackend',
+        "EMAIL_HOST": os.environ.get('EMAIL_HOST', ''),
+        "EMAIL_PORT": os.environ.get('EMAIL_PORT', ''),
+        "EMAIL_FROM": os.environ.get('EMAIL_FROM', 'no-reply@forus.io'),
+        "EMAIL_HOST_USER": os.environ.get('EMAIL_HOST_USER', ''),
+        "EMAIL_HOST_PASSWORD": os.environ.get('EMAIL_HOST_PASSWORD', ''),
+        "EMAIL_USE_TLS": os.environ.get('EMAIL_USE_TLS', 'True') == 'True',
+        "EMAIL_USE_SSL": os.environ.get('EMAIL_USE_SSL', 'False') == 'True',
+    }
+])
+EMAIL_CONNACTIONS =  EMAIL_CONNACTIONS + list(json.loads(os.environ.get('EMAIL_CONNACTIONS', '[]')))
+
+
 
 
 # i18
@@ -150,10 +157,9 @@ LOCALE_PATHS = (
 DATE_FORMAT = "d-m-Y"
 USE_L10N = False
 
+ADMIN_ENABLED = os.environ.get('ADMIN_ENABLED', 'False') == 'True'
 
-ADMIN_ENABLED= os.environ.get('ADMIN_ENABLED', 'False') == 'True'
-
-#TWILLIO
+# TWILLIO
 DJANGO_TWILIO_FORGERY_PROTECTION = False
 DJANGO_TWILIO_BLACKLIST_CHECK = True
 
@@ -161,16 +167,13 @@ TWILIO_ACCOUNT_SID = os.environ.get('TWILIO_ACCOUNT_SID', None)
 TWILIO_AUTH_TOKEN = os.environ.get('TWILIO_AUTH_TOKEN', None)
 TWILIO_PHONE_NUMBER = os.environ.get('TWILIO_PHONE_NUMBER', None)
 
-
-
-
 FCM_DJANGO_SETTINGS = {
-        "FCM_SERVER_KEY": os.environ.get('FIREBASE_SERVER_KEY', ''),
-         # true if you want to have only one active device per registered user at a time
-         # default: False
-        "ONE_DEVICE_PER_USER": False,
-         # devices to which notifications cannot be sent,
-         # are deleted upon receiving error response from FCM
-         # default: False
-        "DELETE_INACTIVE_DEVICES": True,
+    "FCM_SERVER_KEY": os.environ.get('FIREBASE_SERVER_KEY', ''),
+    # true if you want to have only one active device per registered user at a time
+    # default: False
+    "ONE_DEVICE_PER_USER": False,
+    # devices to which notifications cannot be sent,
+    # are deleted upon receiving error response from FCM
+    # default: False
+    "DELETE_INACTIVE_DEVICES": True,
 }
