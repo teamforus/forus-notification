@@ -6,7 +6,7 @@
     <br/>
     U heeft verzocht uw {{fund_product_name}}-voucher per e-mail te ontvangen.
     <br/>
-    Onderstaande QR-Code kunt u gebruiken om bij een aanbieder te laten zien.
+    Onderstaande QR-code kunt u gebruiken om bij een aanbieder te laten zien.
     <br/>
     De aanbieder kan deze code scannen om uw product of dienst te leveren.
     <br/>
