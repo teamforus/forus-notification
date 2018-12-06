@@ -11,7 +11,7 @@
     U heeft zojuist aangegeven dat u wilt inloggen op {{ platform }}.
     <br/>
     <br/>
-    Klik <a href="{{ link }}" target="_blank" style="color: #315efd; text-decoration: underline;">hier</a> of de knop hieronder om in te loggen.
+    Klik <a href="{{ link }}" target="_blank" style="color: #315efd; text-decoration: underline;">hier</a> of op de knop hieronder om in te loggen.
     <br/>
 {% endblock %}
 
