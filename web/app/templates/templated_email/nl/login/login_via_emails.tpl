@@ -1,6 +1,6 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}Inloggen op {{ platform }}{% endblock %}
+{% block subject %}Inloggen op <i>{{ platform }}</i>{% endblock %}
 {% block button_text %}Inloggen{% endblock %}
 {% block button_link %}{{ link }}{% endblock %}
 {% block title %}Log in op {{ platform }}{% endblock %}
@@ -8,7 +8,7 @@
 {% block html %}
     Beste gebruiker,
     <br/>
-    U heeft zojuist aangegeven dat u wilt inloggen op {{ platform }}.
+    U heeft zojuist aangegeven dat u wilt inloggen op <i>{{ platform }}</i>.
     <br/>
     <br/>
     Klik <a href="{{ link }}" target="_blank" style="color: #315efd; text-decoration: underline;">hier</a> of op de knop hieronder om in te loggen.
