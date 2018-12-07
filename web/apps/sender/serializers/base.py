@@ -1,4 +1,4 @@
-from abc import ABC
+
 
 import django
 from rest_framework import serializers
@@ -32,5 +32,5 @@ class BaseMobileSerializer(BaseSerializer):
         return ''
 
 
-class BaseEmailSerializer(BaseSerializer, ABC):
+class BaseEmailSerializer(BaseSerializer):
     pass
