@@ -1,6 +1,6 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}Inloggen op <i>{{ platform }}</i>{% endblock %}
+{% block subject %}Inloggen op {{ platform }}{% endblock %}
 {% block button_text %}Inloggen{% endblock %}
 {% block button_link %}{{ link }}{% endblock %}
 {% block title %}Log in op {{ platform }}{% endblock %}
