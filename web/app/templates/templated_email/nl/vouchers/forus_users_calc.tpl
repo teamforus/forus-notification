@@ -1,5 +1,7 @@
+
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Totaal aantal gebruikers {{ sponsor_name }} - {{fund_name}}{% endblock %}
+{% block title %}Totaal aantaal gebruikers {{ sponsor_name }} - {{ platform }}{% endblock %}
 {% block html %}
     Sponsor: {{ sponsor_name }} <br />
     <br />

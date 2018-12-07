@@ -1,6 +1,7 @@
 
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Uw aanmelding voor een fonds.{% endblock %}
+{% block title %} {{ provider_name }} wilt zich aanmelden voor {{ fund_name }}{% endblock %}
 {% block html %}
     Beste {{ provider_name }},
     <br/>
