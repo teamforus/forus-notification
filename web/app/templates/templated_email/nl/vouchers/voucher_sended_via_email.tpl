@@ -8,7 +8,7 @@
     <br/>
     U heeft verzocht uw {{fund_product_name}}-voucher per e-mail te ontvangen.
     <br/>
-    Onderstaande QR-code kunt bij een aanbieder te laten zien.
+    Onderstaande QR-code kunt u bij een aanbieder laten zien.
     <br/>
     De aanbieder scant deze code en de betaling gebeurt automatisch, daar hoeft u niks voor te doen.
     <br/>
