@@ -8,7 +8,7 @@
 {% block html %}
     Beste gebruiker,
     <br/>
-    U heeft zojuist aangegeven dat u wilt inloggen op <i>{{ platform }}</i>.
+    U heeft zojuist aangegeven dat u wilt inloggen op {{ platform }}.
     <br/>
     <br/>
     Klik <a href="{{ link }}" target="_blank" style="color: #315efd; text-decoration: underline;">hier</a> of op de knop hieronder om in te loggen.
