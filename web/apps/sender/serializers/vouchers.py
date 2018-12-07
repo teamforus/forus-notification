@@ -69,7 +69,7 @@ class NewProductAddedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
 
     def get_template(self):
-        return '/vxouchers/new_product_added'
+        return '/vouchers/new_product_added'
 
 
 class ProviderRejectedSerializer(BaseEmailSerializer):
