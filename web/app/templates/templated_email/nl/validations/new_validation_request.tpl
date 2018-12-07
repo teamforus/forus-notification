@@ -1,8 +1,10 @@
 
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Er staat een nieuw verzoek voor u klaar.{% endblock %}
+{% block title %}Er staat een nieuw verzoek voor u klaar.{{ platform }}{% endblock %}
 {% block html %}
     Beste validator,
+    <br/>
     <br/>
     Er staat een verzoek voor u klaar om eigenschappen te valideren.
     <br/>
