@@ -1,8 +1,9 @@
 
 {% extends "templated_email/base.tpl" %}
 {% block subject %}{{sponsore_name}}  heeft u toegevoegd als validator{% endblock %}
+{% block title %}{{sponsore_name}}  heeft u toegevoegd als validator{% endblock %}
 {% block html %}
-    Beste validator,
+    Beste medewerker,
     <br/>
     <br/>
     {{ sponsore_name }} heeft u toegevoegd als validator.

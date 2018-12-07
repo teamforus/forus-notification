@@ -8,6 +8,7 @@
 {% block html %}
     Beste gebruiker,
     <br/>
+    <br/>
     U heeft zojuist aangegeven dat u wilt inloggen op {{ platform }}.
     <br/>
     <br/>
