@@ -1,6 +1,7 @@
 
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Uw aanmelding voor {{fund_name}}{% endblock %}
+{% block title %}Uw aanmelding voor {{fund_name}}{% endblock %}
 {% block html %}
     Uw aanmelding is geaccepteerd!
     <br/>

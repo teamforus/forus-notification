@@ -1,6 +1,7 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %} Er is een nieuw fonds toegevoegd{% endblock %}
+{% block subject %}Er is een nieuw fonds toegevoegd{% endblock %}
+{% block title %}Er is een nieuw fonds toegevoegd{{ platform }}{% endblock %}
 {% block html %}
     Beste gebruiker,
     <br/>
