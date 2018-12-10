@@ -15,6 +15,13 @@ class ForusUsersCalcSerializer(BaseEmailSerializer):
     def get_template(self):
         return '/vouchers/forus_users_calc'
 
+class ProductBoughtSerializer(BaseEmailSerializer):
+    product_name = serializers.CharField()
+    expiration_date = serializers.CharField()
+
+    def get_template(self):
+        return '/vouchers/product_bought'
+
 class NewFundEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     provider_dashboard_link = serializers.CharField()
@@ -62,7 +69,7 @@ class NewProductAddedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
 
     def get_template(self):
-        return '/vxouchers/new_product_added'
+        return '/vouchers/new_product_added'
 
 
 class ProviderRejectedSerializer(BaseEmailSerializer):
