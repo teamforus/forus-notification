@@ -23,6 +23,7 @@ urlpatterns = [
 
     url(r'^login/login_via_email', views.LoginViaEmail.as_view(), name='login-via-email'),
 
+    url(r'^user/email_activation', views.EmailActivation.as_view(), name='email-activation'),
 
     url(r'^sponsors/you_added_as_validator', views.SponsorAddYouAsValidatorApi.as_view(), name='you-added-as-validator'),
     url(r'^validations/new_validation_request', views.NewValidationRequestApi.as_view(),
