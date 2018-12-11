@@ -26,7 +26,7 @@
                                     </tr>
                                     <tr>
                                         <td style="border-collapse: collapse; padding-bottom: 25px;">
-                                            <img src="{% block header_image %}" style="width: 297px; display: block; margin: 0 auto;"> {% endblock %}
+                                            <img src="{% block header_image %} {% endblock %}" style="width: 297px; display: block; margin: 0 auto;">
                                         </td>
                                     </tr>
                                     <tr>
