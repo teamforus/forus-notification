@@ -1,7 +1,7 @@
 {% extends "templated_email/base.tpl" %}
 {% block subject %}Uitverkocht: aanbod '{{product_name}}'{% endblock %}
 {% block title %}Uitverkocht: aanbod '{{product_name}}' {% endblock %}
-{% block button_text %}Dashboard openen{% endblock %}
+{% block button_text %}Inloggen{% endblock %}
 {% block button_link %}{{ sponsor_dashboard_url }}{% endblock %}
 {% block html %}
 Beste gebruiker,<br />
