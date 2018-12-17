@@ -12,6 +12,7 @@ urlpatterns = [
     url(r'^vouchers/forus_new_fund_created', views.ForusNewFundCreated.as_view(), name='forus-new-fund-created-email'),
     url(r'^vouchers/forus_users_calc', views.ForusUsersCalc.as_view(), name='forus-users-calc-email'),
     url(r'^vouchers/product_bought', views.ProductBought.as_view(), name='product-bought'),
+    url(r'^vouchers/product_soldout', views.ProductSoldout.as_view(), name='product-soldout'),
     url(r'^vouchers/new_fund_created', views.NewFundCreated.as_view(), name='new-fund-created-email'),
     url(r'^vouchers/provider_approved', views.ProviderApprovedView.as_view(), name='provider-approved-email'),
     url(r'^vouchers/provider_applied', views.ProviderAppliedView.as_view(), name='provider-applied-email'),
@@ -23,6 +24,7 @@ urlpatterns = [
 
     url(r'^login/login_via_email', views.LoginViaEmail.as_view(), name='login-via-email'),
 
+    url(r'^user/email_activation', views.EmailActivation.as_view(), name='email-activation'),
 
     url(r'^sponsors/you_added_as_validator', views.SponsorAddYouAsValidatorApi.as_view(), name='you-added-as-validator'),
     url(r'^validations/new_validation_request', views.NewValidationRequestApi.as_view(),
