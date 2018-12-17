@@ -22,5 +22,9 @@
     Met vriendelijke groet,
     <br/>
     <br/>
-    Team {{fund_name}}
+    Team {{fund_name}}<br />
+    <br/>
+    <br/>
+    Log in op uw gebruikersomgeving om aanbiedingen toe te voegen, door <a href="{{ provider_dashboard_link }}" target="_blank" style="color: #315efd; text-decoration: underline;">hier</a> of op de onderstaande knop te klikken.<br/>
+
 {% endblock %}
