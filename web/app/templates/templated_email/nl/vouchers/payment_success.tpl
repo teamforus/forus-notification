@@ -6,6 +6,6 @@
     Beste gebruiker,
     <br/>
     <br/>
-    Er is zojuist een aankoop gedaan met je voucher. Hierdoor is er een bedrag afgeschreven.
-Het huidige bedrag van je {{fund_name}} voucher is {{current_budget}}
+    Er is zojuist een aankoop gedaan met uw voucher. Hierdoor is er een bedrag afgeschreven.<br/>
+Het huidige bedrag van uw '{{fund_name}}'-voucher is {{current_budget}}
 {% endblock %}
