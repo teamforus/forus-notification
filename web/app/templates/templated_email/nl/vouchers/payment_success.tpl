@@ -1,7 +1,7 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}Er is een bedrag van je voucher afgeschreven.{% endblock %}
-{% block title %}Er is een bedrag van je voucher afgeschreven.{% endblock %}
+{% block subject %}Er is een bedrag van uw voucher afgeschreven.{% endblock %}
+{% block title %}Er is een bedrag van uw voucher afgeschreven.{% endblock %}
 {% block html %}
     Beste gebruiker,
     <br/>
