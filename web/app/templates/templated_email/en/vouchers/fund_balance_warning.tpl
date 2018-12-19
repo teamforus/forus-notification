@@ -8,6 +8,7 @@
     <br/>
     <br/>
     The balance on your '{{fund_name}}' has reached the limit of €{{treshold_amount}}.
+    <br/>
     Login to the sponsor dashboard to increase the balance.
     <br/>
     <a href="{{ sponsor_dashboard_link }}" target="_blank" style="color: #315efd; text-decoration: underline;">{{ sponsor_dashboard_link }}</a>
