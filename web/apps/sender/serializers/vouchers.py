@@ -65,7 +65,7 @@ class FundExpiresSerializer(BaseEmailSerializer):
     end_date_fund = serializers.CharField()
     phonenumber_sponsor = serializers.CharField()
     emailaddress_sponsor = serializers.CharField()
-    url_shop_implementation = serializers.CharField()
+    shop_implementation_url = serializers.CharField()
 	
 	def get_template(self):
 	    return '/vouchers/fund_expires'

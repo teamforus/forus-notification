@@ -9,7 +9,7 @@
     On {{start_date_fund}} you received from {{sponsor_name}} a {{fund_name}}-voucher.
     Your {{fund_name}}-voucher is valid until {{end_date_fund}}. After {{end_date_fund}} your voucher will expire.
     <br/>
-    You can see your current budget on the webshop: {{url_shop_implementation}}.
+    You can see your current budget on the webshop: {{shop_implementation_url}}.
     Login with your e-mailaddress.
     If you can't login, pleas contact:
     <br/>
