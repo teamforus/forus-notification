@@ -26,12 +26,14 @@ class FundStarted(ApiSendView):
 class FundExpires(ApiSendView):
 	serializer_class = serializers.FundExpiresSerializer
 
+class FundBalanceWarning(ApiSendView):
+	serializer_class = serializers.FundBalanceWarningSerializer
+
 class ProviderAppliedView(ApiSendView):
     serializer_class = serializers.ProviderAppliedEmailSerializer
 
 class NewProductAddedView(ApiSendView):
     serializer_class = serializers.NewProductAddedEmailSerializer
-
 
 class ProviderRejectedView(ApiSendView):
     serializer_class = serializers.ProviderRejectedSerializer

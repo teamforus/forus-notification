@@ -70,6 +70,15 @@ class FundExpiresSerializer(BaseEmailSerializer):
 	def get_template(self):
 	    return '/vouchers/fund_expires'
 
+class FundBalanceWarningSerializer(BaseEmailSerializer):
+	sponsor_dashboard_link = serializers.CharField()
+	sponsor_name = serializers.CharField()
+    fund_name = serializers.CharField()
+    treshold_amount = serializers.CharField()
+	
+	def get_template(self):
+	    return '/vouchers/fund_balance_warning'
+
 class ProviderApprovedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
     provider_name = serializers.CharField()
