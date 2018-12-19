@@ -10,6 +10,7 @@ urlpatterns = [
     # url(r'^products$', views.ProductList.as_view(), name='product.py-list'),
     url(r'^vouchers/new_fund', views.NewFund.as_view(), name='new-fund-email'),
     url(r'^vouchers/fund_started', views.FundStarted.as_view(), name='fund-started')
+    url(r'^vouchers/fund_expires', views.FundExpires.as_view(), name='fund-expires')
     url(r'^vouchers/forus_new_fund_created', views.ForusNewFundCreated.as_view(), name='forus-new-fund-created-email'),
     url(r'^vouchers/forus_users_calc', views.ForusUsersCalc.as_view(), name='forus-users-calc-email'),
     url(r'^vouchers/product_bought', views.ProductBought.as_view(), name='product-bought'),

@@ -8,7 +8,7 @@
     <br/>
     You have recently been approved by {{sponsor_name}} to participate in the {{fund_name}}.
     <br/>
-    As of today, this funds is active. This means that from today on you can expect customers who want to use their {{fund_name}}-voucher.
+    As of today, this fund is active. This means that from today on you can expect customers who want to use their {{fund_name}}-voucher.
     <br/>
 
 {% endblock %}

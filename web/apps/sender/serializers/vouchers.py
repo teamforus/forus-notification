@@ -52,12 +52,23 @@ class ForusNewFundCreatedEmailSerializer(BaseEmailSerializer):
         return '/vouchers/forus_new_fund_created'
 
 class FundStartedSerializer(BaseEmailSerializer):
-	    product_name = serializers.CharField()
-	    sponsor_dashboard_url = serializers.CharField()
+	fund_name = serializers.CharField()
+	sponsor_name = serializers.CharField()
 	
-	    def get_template(self):
-	        return '/vouchers/fund_started'
+	def get_template(self):
+	    return '/vouchers/fund_started'
+
+class FundExpiresSerializer(BaseEmailSerializer):
+	fund_name = serializers.CharField()
+	sponsor_name = serializers.CharField()
+    start_date_fund = serializers.CharField()
+    end_date_fund = serializers.CharField()
+    phonenumber_sponsor = serializers.CharField()
+    emailaddress_sponsor = serializers.CharField()
+    url_shop_implementation = serializers.CharField()
 	
+	def get_template(self):
+	    return '/vouchers/fund_expires'
 
 class ProviderApprovedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()
