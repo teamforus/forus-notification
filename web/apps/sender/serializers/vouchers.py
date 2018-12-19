@@ -51,6 +51,13 @@ class ForusNewFundCreatedEmailSerializer(BaseEmailSerializer):
     def get_template(self):
         return '/vouchers/forus_new_fund_created'
 
+class FundStartedSerializer(BaseEmailSerializer):
+	    product_name = serializers.CharField()
+	    sponsor_dashboard_url = serializers.CharField()
+	
+	    def get_template(self):
+	        return '/vouchers/fund_started'
+	
 
 class ProviderApprovedEmailSerializer(BaseEmailSerializer):
     fund_name = serializers.CharField()

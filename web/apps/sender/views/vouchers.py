@@ -17,6 +17,9 @@ class ProductSoldout(ApiSendView):
 class NewFundCreated(ApiSendView):
     serializer_class = serializers.NewFundCreatedEmailSerializer
 
+class ProductSoldout(ApiSendView):
+	    serializer_class = serializers.FundStartedSerializer
+
 class ForusNewFundCreated(ApiSendView):
     serializer_class = serializers.ForusNewFundCreatedEmailSerializer
 
