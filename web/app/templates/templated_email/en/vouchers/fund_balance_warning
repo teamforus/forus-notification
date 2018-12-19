@@ -1,7 +1,7 @@
 
 {% extends "templated_email/base.tpl" %}
-{% block subject %}Uw fonds heeft uw ingestelde grens bereikt{% endblock %}
-{% block title %}Uw fonds heeft uw ingestelde grens bereikt{% endblock %}
+{% block subject %}Your fund has reached your balance limit{% endblock %}
+{% block title %}Your fund has reached your balance limit{% endblock %}
 {% block button_link %}{{ sponsor_dashboard_link }}{% endblock %}
 {% block html %}
     Dear {{sponsor_name}},
