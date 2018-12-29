@@ -20,13 +20,20 @@ class NewFundCreated(ApiSendView):
 class ForusNewFundCreated(ApiSendView):
     serializer_class = serializers.ForusNewFundCreatedEmailSerializer
 
+class FundStarted(ApiSendView):
+	serializer_class = serializers.FundStartedSerializer
+
+class FundExpires(ApiSendView):
+	serializer_class = serializers.FundExpiresSerializer
+
+class FundBalanceWarning(ApiSendView):
+	serializer_class = serializers.FundBalanceWarningSerializer
+
 class ProviderAppliedView(ApiSendView):
     serializer_class = serializers.ProviderAppliedEmailSerializer
 
-
 class NewProductAddedView(ApiSendView):
     serializer_class = serializers.NewProductAddedEmailSerializer
-
 
 class ProviderRejectedView(ApiSendView):
     serializer_class = serializers.ProviderRejectedSerializer
