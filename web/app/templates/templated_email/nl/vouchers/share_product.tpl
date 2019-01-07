@@ -6,6 +6,6 @@
     {{ product_name }}<br />
     <img style="display: block; margin: 0 auto;" src="{{ qr_url }}" width="300" />
     <br />
-    {{ requester_email }} heeft deze qr-code met u gedeeld met de volgende informatie:<br />
+    {{ requester_email }} heeft deze QR-code met u gedeeld met het volgende bericht:<br />
     {{ reason }}
 {% endblock %}
