@@ -12,9 +12,9 @@ class Sender():
         self.user = user
 
     def send_push(self, title, body):
-        connects = UserConnectionFCMDevice.objects.filter(
-            user_connection = UserConnectionField.objects.find_type_connection_by_user(self.user, UserConnectionField.FIREBASE_TYPE)
-        ).all()
+        connects = list(UserConnectionFCMDevice.objects.filter(
+            user_connection__in = UserConnectionField.objects.find_type_connection_by_user(self.user, UserConnectionField.FIREBASE_TYPE)
+        ).all())
 
         for connect in connects:
             if connect.device:
