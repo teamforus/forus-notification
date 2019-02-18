@@ -137,10 +137,7 @@ EMAIL_CONNACTIONS = list([
         "EMAIL_USE_SSL": os.environ.get('EMAIL_USE_SSL', 'False') == 'True',
     }
 ])
-EMAIL_CONNACTIONS =  EMAIL_CONNACTIONS + list(json.loads(os.environ.get('EMAIL_CONNACTIONS', '[]')))
-
-
-
+EMAIL_CONNACTIONS = EMAIL_CONNACTIONS + list(json.loads(os.environ.get('EMAIL_CONNACTIONS', '[]')))
 
 # i18
 LANGUAGE_CODE = 'nl'
@@ -178,6 +175,5 @@ FCM_DJANGO_SETTINGS = {
     "DELETE_INACTIVE_DEVICES": True,
 }
 
-
 APNS_KEY_LOCATION = os.path.join(BASE_DIR, 'cert', 'key.pem')
-APNS_SENDBOX = os.environ.get('APNS_SENDBOX', 'False') =='True'
+APNS_SENDBOX = os.environ.get('APNS_SENDBOX', 'False') == 'True'
