@@ -34,7 +34,7 @@ services:
     volumes_from:
       - data
     ports:
-      - "5432:5432"
+      - "5490:5432"
 
 
   data:
