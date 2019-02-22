@@ -4,8 +4,8 @@ from apps.notification_user.models import UserConnectionField, UserConnectionFCM
 
 
 class UserConnectionMixin(object):
-    def remove_connection(self, value):
-        UserConnectionField.objects.filter(value=value).delete()
+    def remove_connection(self, user_id, value):
+        UserConnectionField.objects.filter(value=value, user__id=user_id).delete()
 
     def create_connection(self, user_id, type, value):
         user_connection = UserConnectionField.objects.get_or_create(user_id, type, value)

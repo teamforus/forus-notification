@@ -19,4 +19,4 @@ class RemoveConnectionView(UserConnectionMixin, generics.CreateAPIView):
     serializer_class = RemoveUserConnectionFieldSerializer
 
     def perform_create(self, serializer):
-        self.remove_connection(serializer.value)
+        self.remove_connection(serializer.user_id, serializer.value)
