@@ -6,10 +6,11 @@ from twilio.rest import Client
 from apps.core.celery import app
 from apps.email_sender.email_sender import Sender as EmailSender
 from apps.email_sender.fcm_sender import Sender as FcmSender
+from apps.email_sender.apns_sender import Sender as ApnsSender
 from apps.notification_user.models import User
 
 
-#@app.task(bind=True)
+# @app.task(bind=True)
 def send_mobile_sms(self, phone, body):
     from twilio.rest import Client
 
@@ -32,8 +33,14 @@ def send_mobile_sms(self, phone, body):
 @app.task(bind=True)
 def send_mobile_push(self, reffer_user_id, title, body):
     user = User.objects.filter(reffer_id=reffer_user_id).get()
+
     email_sender = FcmSender(user)
     email_sender.send_push(title, body)
+
+
+    apns_sender = ApnsSender(user)
+    apns_sender.send_push(title, body)
+
 
 @app.task(bind=True)
 def send_email(self, reffer_user_id, email, template, data):
