@@ -55,10 +55,12 @@ class User(models.Model):
 class UserConnectionField(models.Model):
     EMAIL_TYPE = 1
     FIREBASE_TYPE = 2
+    APNS_TYPE = 3
 
     TYPE_CHOICES = (
         (EMAIL_TYPE, 'Email'),
         (FIREBASE_TYPE, 'Firebase'),
+        (APNS_TYPE, 'APNS'),
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=False, null=True)

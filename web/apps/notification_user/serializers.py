@@ -13,3 +13,13 @@ class UserConnectionFieldSerializer(serializers.Serializer):
         self.value = attrs['value']
         self.type = attrs['type']
         return attrs
+
+
+class RemoveUserConnectionFieldSerializer(serializers.Serializer):
+    user_id = serializers.CharField()
+    value = serializers.CharField()
+
+    def validate(self, attrs):
+        self.user_id = attrs['user_id']
+        self.value = attrs['value']
+        return attrs

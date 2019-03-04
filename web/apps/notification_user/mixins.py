@@ -4,12 +4,13 @@ from apps.notification_user.models import UserConnectionField, UserConnectionFCM
 
 
 class UserConnectionMixin(object):
-    def create_connection(self, user_id, type, value):
+    def remove_connection(self, user_id, value):
+        UserConnectionField.objects.filter(value=value, user__id=user_id).delete()
 
-        user_connection =  UserConnectionField.objects.get_or_create(user_id, type, value)
-        
+    def create_connection(self, user_id, type, value):
+        user_connection = UserConnectionField.objects.get_or_create(user_id, type, value)
+
         if type == UserConnectionField.FIREBASE_TYPE:
             fcm_connection = UserConnectionFCMDevice.objects.get_or_create_by_connection(user_connection)
-
 
         return user_connection
