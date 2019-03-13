@@ -177,3 +177,4 @@ FCM_DJANGO_SETTINGS = {
 
 APNS_KEY_LOCATION = os.path.join(BASE_DIR, 'cert', 'key.pem')
 APNS_SENDBOX = os.environ.get('APNS_SENDBOX', 'False') == 'True'
+APNS_BUNDLE_ID = os.environ.get('APNS_BUNDLE_ID', '')
