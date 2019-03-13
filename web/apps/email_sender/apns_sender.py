@@ -20,4 +20,4 @@ class Sender():
 
         payload = Payload(alert=title, sound="default", badge=1)
         for connect in connects:
-            client.send_notification(connect.value, payload, topic=settings.APNS_BUNDLE_ID)
+            client.send_notification(token_hex=connect.value, notification=payload, topic=settings.APNS_BUNDLE_ID)
