@@ -110,6 +110,7 @@ class NewProductAddedEmailSerializer(BaseEmailSerializer):
 class ProviderRejectedSerializer(BaseEmailSerializer):
     provider_name = serializers.CharField()
     sponsor_name = serializers.CharField()
+    sponsor_phone = serializers.CharField()
     fund_name = serializers.CharField()
 
     def get_template(self):

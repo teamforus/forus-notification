@@ -6,16 +6,20 @@
     Beste {{ provider_name }},
     <br/>
     <br/>
-    Kort geleden heeft u zich aangemeld voor {{ fund_name }}.
+    Onlangs heeft u zich aangemeld voor {{ fund_name }}.
     <br/>
-    {{ sponsor_name }} heeft uw aanmelding afgewezen.
+    {{ sponsor_name }} heeft uw aanmelding beoordeeld en heeft besloten dat u voor {{ fund_name }} bent afgewezen.
     <br/>
     <br/>
-    Wilt u hiervan de reden weten? Neem dan contact op met {{ sponsor_name }}.
+    Mocht u hierover meer willen weten, dan kunt u contact opnemen met {{ sponsor_name }}.
+    <br />
+    Telefoonnummer: {{ sponsor_phone }}
+    <br />
+    We hopen u hiermee voldoende te hebben geïnformeerd.
     <br/>
     <br/>
     Met vriendelijke groet,
     <br/>
     <br/>
-    {{ sponsor_name }}
+    Team {{ fund_name }}
 {% endblock %}
