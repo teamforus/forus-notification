@@ -15,8 +15,9 @@ elif [[ $unmaster == 'Darwin' ]]; then
    platform='mac'
 fi
 
-
-
+get_container_name() {
+   docker ps -a --filter="name=forus-notification_$1" --format '{{.Names}}'
+}
 
 show-help() {
     echo 'Functions:'
@@ -71,15 +72,6 @@ collectstatic() {
   #  docker exec -it $(get_container_name 'web') bash -c "cd app && npm i && npm run build"
     docker exec -it $(get_container_name 'web') python manage.py collectstatic
 }
-
-get_container_name() {
-   docker ps -a --filter="name=forus-notification_$1" --format '{{.Names}}'
-}
-
-
-
-
-
 
 stop() {
     echo 'Stop all containert'
